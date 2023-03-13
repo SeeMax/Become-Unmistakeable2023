@@ -1,0 +1,147 @@
+$black:#231F20;
+$white:#FFFFFF;
+$offWhite:#f2f3f4;
+$gray:#4a5155;
+$highlight:#CBF600;
+
+.half-half-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height:500px;
+}
+
+.half-half-image-half {
+  
+  img {
+    
+  } 
+}
+ 
+.half-half-text-half {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+
+  .half-half-text-half-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+    max-width:700px;
+    padding:10px 50px 70px 50px;
+  }
+
+  h2 {
+    
+  }
+  
+  h3 {
+    margin-top:.5rem;
+  }
+  
+  p {
+  
+  }
+  
+  .seemax-button {
+    margin-top:1rem;
+  }
+}
+
+
+
+
+.black-half-half-section {
+
+  .half-half-text-half {
+    color:white;
+    background:$black;
+
+    .half-half-text-half-inner {
+      padding:70px 50px 90px 50px;
+    }
+  }
+}
+
+.right-half-half-section {
+
+  .half-half-text-half {
+    order:1;
+    justify-content: flex-end;
+  }
+
+  .half-half-image-half {
+    order:2;
+  }
+}
+
+.full-half-half-section {
+  
+  .content {
+    padding:0;
+    max-width:100%;
+  }
+
+  .half-half-text-half-inner {
+    padding:70px 50px 90px 50px;
+  }
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+  
+  .half-half-section {
+    
+  }
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .half-half-section {
+
+  }
+  .half-half-text-half {
+
+    .half-half-text-half-inner {
+      padding:50px 0px 70px 0px;
+    }
+  }
+
+  .black-half-half-section {
+
+    .half-half-text-half {
+    
+      .half-half-text-half-inner {
+        padding: 50px 25px 70px 25px;
+      }
+    }
+  }
+
+  .right-half-half-section {
+
+    .half-half-text-half {
+      order:2;
+      justify-content: flex-end;
+    }
+  
+    .half-half-image-half {
+      order:1;
+    }
+  }
+
+  .full-half-half-section {
+
+    .half-half-text-half-inner {
+      padding: 50px 25px 70px 25px;
+    }
+
+    .half-half-image-half {
+      min-height:300px;
+    }
+  }  
+}

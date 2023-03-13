@@ -1,0 +1,174 @@
+#wp-admin-bar-wp-logo,
+#wp-admin-bar-comments {
+  display: none !important;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  float: none !important;
+}
+
+/* .menu-icon-post .wp-menu-image:before{
+  content:"";
+  background: no-repeat center center;
+  background-size:20px;
+  background-image: url('../dist/images/admin-icon.svg');
+} */
+
+/* Turn this on to replace all the WP icons with a single Icon */
+/* #adminmenu div.wp-menu-image:before {
+  color:#ffffff !important;
+  content:"";
+  background: no-repeat center center;
+  background-size:20px;
+  background-image: url('../dist/images/admin-icon.svg');
+} */
+
+.wp-core-ui {
+  color: black;
+}
+
+/* Turn this on to replace The Site Home Icons with a Brand Icon */
+.wp-admin #wpadminbar #wp-admin-bar-site-name > .ab-item:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: no-repeat center center;
+  background-size: 20px;
+  background-image: url("../dist/images/logo-alt-admin.svg") !important;
+}
+
+.wp-core-ui .editor-styles-wrapper ul li {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.wp-core-ui .block-editor .editor-styles-wrapper a:after {
+  display: none;
+}
+
+.wp-core-ui .block-editor .editor-styles-wrapper a:before {
+  display: inline-block;
+  border-top: 0px solid white;
+  top: 3px;
+}
+
+.wp-core-ui .editor-styles-wrapper .button-primary {
+  color: white;
+}
+
+.wp-core-ui ul li:before {
+  content: "" !important;
+}
+
+/* Remvoing ROunding on inputs, buttons, and everything else within the wordpress UI */
+.is-selected *,
+#poststuff *,
+#posts-filter *,
+.taxonomy-category * {
+  border-radius: 0 !important;
+}
+
+/* .wp-core-ui .editor-styles-wrapper * {
+  border-radius: 0 !important;
+} */
+
+.wp-core-ui .diff-meta {
+  padding: 0;
+  margin: 5px;
+}
+
+.wp-core-ui .ui-slider-handle {
+  border-radius: 50% !important;
+  box-sizing: content-box;
+}
+
+.wp-core-ui .revisions-controls {
+  height: auto !important;
+}
+
+.wp-core-ui .revisions-controls .wp-slider {
+  top: -4px;
+}
+
+.wp-core-ui .revisions-controls input[type="checkbox"] {
+  position: relative;
+  top: 1px;
+  vertical-align: middle;
+}
+
+.wp-core-ui .components-modal__frame input[type="radio"]:checked:before,
+.wp-core-ui .components-popover input[type="radio"]:checked:before,
+.wp-core-ui .edit-post-header input[type="radio"]:checked:before,
+.wp-core-ui .edit-post-sidebar input[type="radio"]:checked:before,
+.wp-core-ui .edit-post-text-editor input[type="radio"]:checked:before,
+.wp-core-ui .edit-post-visual-editor input[type="radio"]:checked:before,
+.wp-core-ui .editor-post-publish-panel input[type="radio"]:checked:before {
+  /* margin:0; */
+}
+
+/* over ride for guttenberg block selector */
+.wp-core-ui .block-editor-block-types-list li {
+  width: 33.33333%;
+}
+
+/* Guttenberg Styles */
+.wp-block {
+  max-width: 100%;
+}
+
+.edit-post-visual-editor .block-editor-block-list__block {
+  margin: 0;
+}
+
+.is-selected {
+  margin: 14px 0 !important;
+}
+
+.block-editor-editor-skeleton__sidebar,
+.postbox-container {
+}
+
+.block-editor .editor-styles-wrapper {
+  height: auto;
+}
+
+.acf-field {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 200 !important;
+}
+
+/* ACFs */
+.acf-field-group .acf-label label,
+.acf-field-repeater .acf-label label {
+  font-weight: 400 !important;
+  /* color:blue !important; */
+}
+
+.acf-field-group .acf-label {
+  /* color:blue !important; */
+  font-weight: 800 !important;
+  font-size: 1.2em !important;
+}
+
+.acf-field-group .acf-input .acf-label {
+  color: black !important;
+  font-size: 1em !important;
+}
+
+ul.acf-radio-list.acf-hl li,
+ul.acf-checkbox-list.acf-hl li {
+  width: auto;
+}
+
+.editor-styles-wrapper a:after {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.editor-styles-wrapper textarea,
+.editor-styles-wrapper select {
+  padding: 0px 10px !important;
+}

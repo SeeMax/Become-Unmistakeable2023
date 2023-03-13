@@ -1,0 +1,94 @@
+@import "colors";
+
+.single-post {
+}
+
+.single-post-section {
+  .single-post-hero-image {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background-color: $highlight;
+  }
+
+  .content {
+    max-width: 850px;
+    padding-top: 50px;
+    margin-top: -150px;
+  }
+
+  h6 {
+    margin: 0.25rem 0;
+  }
+
+  .single-category-wrapper {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    margin-left: 14px;
+    line-height: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 0.1em;
+      height: 0.9em;
+      width: 1px;
+      background-color: $highlight;
+    }
+
+    &:nth-of-type(1) {
+      margin-left: 0px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    a {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.single-post-header {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.single-post-categories-pre-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.single-post-body {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.single-post-related-posts-section {
+  background: $offWhite;
+
+  .content {
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 885px) {
+}
+
+// 767px And Below
+@media screen and (max-width: 767px) {
+}

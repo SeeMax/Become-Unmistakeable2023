@@ -1,0 +1,173 @@
+$black:#231F20;
+$white:#FFFFFF;
+$offWhite:#f2f3f4;
+$gray:#4a5155;
+$highlight:#CBF600;
+
+.hero-section {
+  overflow: hidden;
+  text-align:center;
+  color:white;
+
+  .content {
+    align-items: center;
+    flex-direction: column;
+    padding-top:100px;
+    padding-bottom:100px;
+  }
+
+  .hero-overlay {
+    background:rgba(0,0,0,0.3);
+  }
+
+  h1 {  
+    margin-bottom:.5rem;
+  }
+
+  p {
+    max-width:850px;
+  }
+
+  .seemax-button {
+    margin-top:1.5rem;
+  }
+  
+  .hero-slider-container {
+    width:100%;
+  }
+
+  .single-hero-section-slide {
+    height:100%;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+  }
+
+  .slick-slide > div { 
+    height: 100%; 
+  }
+
+  .slick-prev, .slick-next {
+    
+    z-index:1000;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width:50px;
+    height:50px;
+    left:0;
+    color: transparent;
+    background:pink1;
+    font-weight:800;
+    line-height:1;
+    font-size:24px;
+    cursor:pointer;
+    padding-bottom: 4px;
+    text-align:center;
+    border: none;
+    outline: none;
+    opacity:0.1;
+    transition:opacity .6s ease;
+
+
+    &:before {
+      font-weight:100;
+      font-size:30px;
+      width:40px;
+      height:50px;
+      position: absolute;
+      left:0px;
+      top:.25em;
+      content:">";
+      width:100%;
+      
+    }
+  }
+    
+  .slick-prev {
+    &:before {
+      content:"<";
+    }
+  }
+  
+  .slick-next {
+    left:auto;
+    right:0;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top:calc(100% - 50px);
+    bottom:auto;
+    left:0;
+    width:100%;
+    
+    li {
+
+      &:before {
+        content:"";
+        width:10px;
+        height:10px;
+        top:5px;
+        left:5px;
+        border-radius:20px;
+        background-color:white;
+        opacity:0.3;
+        transition:all .3s ease;
+      }
+
+      button {
+        opacity:0;
+      }
+    }
+
+    li.slick-active {
+
+      &:before {
+        opacity:1;
+      }
+    }
+  }
+
+  &:hover {
+    
+    .slick-prev, .slick-next {
+      opacity:1;
+    }
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom:0;
+  }
+}
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .hero-section {
+
+
+    .content {
+
+    }
+
+    .slick-prev, .slick-next {
+      display: none !important;
+    }
+  }
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .hero-section {
+
+  }
+}

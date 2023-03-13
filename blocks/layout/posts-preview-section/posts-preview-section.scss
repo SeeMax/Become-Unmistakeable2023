@@ -1,0 +1,32 @@
+$black:#231F20;
+$white:#FFFFFF;
+$offWhite:#f2f3f4;
+$gray:#4a5155;
+$highlight:#CBF600;
+
+
+.posts-preview-section {
+
+  h2 {
+    text-align: center;
+    margin-bottom:50px;
+  }
+
+  .content {
+    justify-content: space-between;
+  }
+}
+
+// .single-post-preview and single-posts-preview-area style are in: 
+// src/scss/components/single-posts-preview.scss
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+
+}

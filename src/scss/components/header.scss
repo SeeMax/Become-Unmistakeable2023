@@ -1,0 +1,218 @@
+@import "colors";
+
+.header {
+  position: relative;
+  font-size: 1em;
+  background: white;
+
+  .content {
+    position: relative;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+.current-menu-item {
+}
+
+.header-logo {
+  position: relative;
+  width: 120px;
+  max-width: 50%;
+
+  a {
+    &:after {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  .menu-item {
+    width: auto;
+    position: relative;
+    margin-left: 2em;
+  }
+}
+
+.main-nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.search-nav-item {
+  line-height: 1em;
+  margin-left: 2em;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.search-item-active {
+  color: $highlight;
+}
+
+// Height set to 0 in pageSetup.js
+.header-search-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  overflow: hidden;
+  background: $highlight;
+
+  .content {
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  h4 {
+    width: auto;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-search-close {
+  display: none;
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+  .header {
+  }
+
+  .main-nav {
+    position: fixed;
+    transform: TranslateX(100%);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    // padding-bottom:10vh;
+    z-index: 100;
+
+    .menu-item {
+      // opacity:0;
+      width: auto;
+      margin: 0 0 4em 0;
+      transition: none;
+      font-size: 1.2em;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .main-nav-inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    // Mirror .content class from global.scss
+    max-width: 1400px;
+    padding: 15vh 50px 10vh 50px;
+  }
+
+  .header-logo {
+    z-index: 104;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    position: absolute;
+    // Calculate top as:
+    // (header .content padding + .header-logo img height - .mobile-menu (this) height) / 2
+    top: 33px;
+    right: 50px;
+    z-index: 103;
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+
+    span {
+      display: block;
+      height: 1px;
+      width: 100%;
+      // margin:9px 0 0 0;
+      background-color: black;
+    }
+  }
+
+  .header-search-container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 104;
+
+    .content {
+      flex-direction: column;
+      padding-top: 25vh;
+    }
+
+    h4 {
+      margin-bottom: 1em;
+    }
+  }
+
+  .mobile-search-close {
+    color: $black;
+    display: inline-block;
+    position: absolute;
+    top: 33px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 885px) {
+}
+
+// 767px And Below
+@media screen and (max-width: 767px) {
+  .header {
+  }
+
+  .header-logo {
+    width: 80px;
+  }
+
+  .main-nav-inner {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .mobile-menu {
+    right: 25px;
+  }
+
+  .mobile-search-close {
+    right: 25px;
+  }
+}

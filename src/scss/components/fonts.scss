@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Didot';
+    src: url('../../fonts/didot.woff2') format('woff2'),
+	       url('../../fonts/didot.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Didot';
+    src: url('../../fonts/didot-italic.woff2') format('woff2'),
+	       url('../../fonts/didot-italic.woff') format('woff');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Didot';
+    src: url('../../fonts/didot-bold.woff2') format('woff2'),
+	       url('../../fonts/didot-bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 800;
+}

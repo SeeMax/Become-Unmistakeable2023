@@ -1,0 +1,30 @@
+@import "colors";
+
+// search.php Page Uses Archive Page Styles
+.archive-page {
+  .hero-section {
+    background: $highlight;
+    text-align: center;
+
+    .content {
+      justify-content: center;
+    }
+  }
+
+  .archive-description {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 885px) {
+}
+
+// 767px And Below
+@media screen and (max-width: 767px) {
+}
