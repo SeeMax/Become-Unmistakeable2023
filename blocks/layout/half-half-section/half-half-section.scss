@@ -1,147 +1,70 @@
-$black:#231F20;
-$white:#FFFFFF;
-$offWhite:#f2f3f4;
-$gray:#4a5155;
-$highlight:#CBF600;
+$black: #000000;
+
+$white: #ffffff;
+$offWhite: #f8f9fb;
+$offOffWhite: #e7ebf2;
+$offOffDark: #cdd3df;
+
+$textGray: #223643;
+$brandGray: #38576b;
+
+$darkPurple: #bd338d;
+$lightPurple: #eb4db4;
+$lightGreen: #dbf266;
+$darkGreen: #b9d42f;
+$darkYellow: #ffd407;
+$lightYellow: #ffea82;
+$lightBlue: #7bd8fa;
+$darkBlue: #46c3f1;
 
 .half-half-section {
   display: flex;
   flex-wrap: wrap;
-  min-height:500px;
 }
 
-.half-half-image-half {
-  
-  img {
-    
-  } 
-}
- 
-.half-half-text-half {
+.half-half-left,
+.half-half-right {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-
-  .half-half-text-half-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width:100%;
-    max-width:700px;
-    padding:10px 50px 70px 50px;
+  text-align: center;
+  padding: 20px 45px;
+  img,
+  svg {
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+  svg {
   }
 
-  h2 {
-    
+  img {
   }
-  
   h3 {
-    margin-top:.5rem;
+    max-width: 500px;
   }
-  
   p {
-  
+    max-width: 340px;
   }
-  
   .seemax-button {
-    margin-top:1rem;
+    margin-top: 30px;
   }
 }
-
-
-
-
-.black-half-half-section {
-
-  .half-half-text-half {
-    color:white;
-    background:$black;
-
-    .half-half-text-half-inner {
-      padding:70px 50px 90px 50px;
-    }
-  }
-}
-
-.right-half-half-section {
-
-  .half-half-text-half {
-    order:1;
-    justify-content: flex-end;
-  }
-
-  .half-half-image-half {
-    order:2;
-  }
-}
-
-.full-half-half-section {
-  
-  .content {
-    padding:0;
-    max-width:100%;
-  }
-
-  .half-half-text-half-inner {
-    padding:70px 50px 90px 50px;
-  }
-}
-
-
 
 // 1024px And Below
-@media screen and (max-width: 1024px){
-  
+@media screen and (max-width: 1024px) {
   .half-half-section {
-    
   }
 }
 
-// 767px And Below
-@media screen and (max-width: 767px){
-
+// 768px And Below
+@media screen and (max-width: 768px) {
   .half-half-section {
-
-  }
-  .half-half-text-half {
-
-    .half-half-text-half-inner {
-      padding:50px 0px 70px 0px;
+    .half-half-left,
+    .half-half-right {
+      padding: 0px 0px;
+    }
+    .half-half-left {
+      margin-bottom: 160px;
     }
   }
-
-  .black-half-half-section {
-
-    .half-half-text-half {
-    
-      .half-half-text-half-inner {
-        padding: 50px 25px 70px 25px;
-      }
-    }
-  }
-
-  .right-half-half-section {
-
-    .half-half-text-half {
-      order:2;
-      justify-content: flex-end;
-    }
-  
-    .half-half-image-half {
-      order:1;
-    }
-  }
-
-  .full-half-half-section {
-
-    .half-half-text-half-inner {
-      padding: 50px 25px 70px 25px;
-    }
-
-    .half-half-image-half {
-      min-height:300px;
-    }
-  }  
 }

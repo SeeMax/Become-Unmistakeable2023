@@ -1,234 +1,187 @@
-$black:#231F20;
-$white:#FFFFFF;
-$offWhite:#f2f3f4;
-$gray:#4a5155;
-$highlight:#CBF600;
+$black: #000000;
+
+$white: #ffffff;
+$offWhite: #f8f9fb;
+$offOffWhite: #e7ebf2;
+$offOffDark: #cdd3df;
+
+$textGray: #223643;
+$brandGray: #38576b;
+
+$darkPurple: #bd338d;
+$lightPurple: #eb4db4;
+$lightGreen: #dbf266;
+$darkGreen: #b9d42f;
+$darkYellow: #ffd407;
+$lightYellow: #ffea82;
+$lightBlue: #7bd8fa;
+$darkBlue: #46c3f1;
 
 .signup-form-section {
   display: flex;
   flex-wrap: wrap;
-  background-color:white;
+  background-color: white;
   text-align: center;
-  
+
   .content {
-    max-width:850px;
     justify-content: center;
     align-content: center;
   }
 
   h2 {
-    
-  }
-  
-  h4 {
-    margin-top:.5rem;
-  }
-  
-  p {
-    
-  }
-  
-  .signup-embed-code {
-    width:auto;
+    color: $darkPurple;
+    margin-bottom: 60px;
   }
 
-  #mc_embed_signup {
-    background:none;
-    font: 1em 'OpenSans';
-    width:100%;
+  .signup-embed-code {
+    max-width: 680px;
+    width: 100%;
     text-align: left;
-    margin-top:2em;
+    display: flex;
+    flex-wrap: wrap;
+
+    .wpcf7 {
+      width: 100%;
+    }
 
     form {
-      padding:0;
-      text-align:center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
     }
 
-    .foot {
-      display:inline-block;
+    .form-line {
+      width: 50%;
+      padding-right: 10px;
+      margin-bottom: 20px;
+      p {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+
+        br {
+          display: none;
+        }
+
+        .form-label {
+          display: inline-block;
+          width: 100%;
+          color: $brandGray;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          padding: 8px 10px;
+          border-color: black;
+        }
+
+        .wpcf7-form-control-wrap {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
     }
 
-    .mc-field-group {
-      margin-bottom:1em;
+    .form-line-2 {
+      padding-right: 0px;
+      padding-left: 10px;
+    }
+
+    .full-width-form-line {
       width: 100%;
-      padding-bottom:0;
-      min-height:auto;
-      min-width: 300px;
+      padding: 0;
+    }
 
-      label {
-        text-align: left;
-        font-weight:300;
-        display: inline-block;
-        width:100%;
-        margin-bottom: .25em;
-        // display:none;
+    .button-form-line {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+
+      p {
+        margin-top: 40px;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .wpcf7-spinner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: calc(100% - 10px);
       }
     }
-      
-    div.mce_inline_error {
-      position: absolute;
-      top:100%;
-      left:0;
-      width:100%;
-      height:auto;
-      margin:0;
-      padding: 10px;
-      background-color:rgba(0,0,0,0);
-      color:red;
-      font-weight:400;
-    }
+  }
 
-    h2, .indicates-required {
-      display:none;
-    }
-
+  .seemax-button {
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 14px;
+    padding-bottom: 12px;
     input {
-      padding: 10px;
-      text-align: left;
-      width:100%;
-      max-width:300px;
-      border: 1px solid $gray;
-    }
-
-    .button {
-      cursor: pointer;
-      width:auto;
-      margin:10px 0 0 0;
-      border:0px solid white;
       position: relative;
-      background-color: $highlight;
-      padding:18px 25px;
-      transition:all .3s ease;
-      box-shadow: 0px 3px 8px -2px rgba(0,0,0,0);
-      border-radius:0;
-      line-height: 1;
-      height:auto;
-      font-size:1em;
-      color:$black;
-      font-weight:300;
-
-      a {
-        
-        &:after {
-          display: none;
-        }
-      }
-
-      &:hover {
-        background-color: $black;
-        color:$highlight;
-        box-shadow: 0px 3px 8px -2px rgba(0,0,0,0);
-      }
+      color: white;
+      background: rgba(0, 0, 0, 0);
+      border: 0px solid white;
+      z-index: 6;
+      font-family: "Nexa";
+      font-weight: 800;
+      font-size: 1em;
+      border-radius: 50;
     }
-
-    .brandingLogo {
-      display: none;
-    }
-  }
-
-  .response {
-    position: absolute;
-    top:calc(100% + 10px);
-    left:0;
-    width:100%;
-    height:auto;
   }
 }
 
+.blue-signup-form-section {
+  h2 {
+    color: $darkBlue;
+  }
+  .seemax-button {
+    background-color: $darkBlue;
 
-.black-signup-form-section {
-  background-color:black;
-  color:white;
-}
+    &:after {
+      background: $lightBlue;
+    }
 
-.highlight-signup-form-section {
-  background-color:$highlight;
-
-  #mc_embed_signup {
-   
-
-    .button {
-      cursor: pointer;
-      width:auto;
-      margin-top:10px;
-      border:0px solid white;
-      position: relative;
-      background-color: black;
-      color:white;
-      padding:10px 25px;
-      transition:all .3s ease;
-      box-shadow: 0px 3px 8px -2px rgba(0,0,0,0);
-
-      a {
-        
-        &:after {
-          display: none;
-        }
-      }
-
-      &:hover {
-        background-color: $black;
-        color:$highlight;
-        box-shadow: 0px 3px 8px -2px rgba(0,0,0,0);
-      }
+    &:before {
+      background: $lightBlue;
     }
   }
-
-    
 }
 
+.green-signup-form-section {
+  h2 {
+    color: $darkGreen;
+  }
+  .seemax-button {
+    background-color: $darkGreen;
+
+    &:after {
+      background: $lightGreen;
+    }
+
+    &:before {
+      background: $lightGreen;
+    }
+  }
+}
 
 // 1024px And Below
-@media screen and (max-width: 1024px){
-  
+@media screen and (max-width: 1024px) {
   .signup-form-section {
-    
   }
 }
 
-// 767px And Below
-@media screen and (max-width: 767px){
-
+// 768px And Below
+@media screen and (max-width: 768px) {
   .signup-form-section {
-
-  }
-  .signup-form-text-half {
-
-    .signup-form-text-half-inner {
-      padding:50px 0px 70px 0px;
-    }
-  }
-
-  .black-signup-form-section {
-
-    .signup-form-text-half {
-    
-      .signup-form-text-half-inner {
-        padding: 50px 25px 70px 25px;
+    .signup-embed-code {
+      .form-line {
+        width: 100%;
+        padding: 0;
       }
     }
   }
-
-  .right-signup-form-section {
-
-    .signup-form-text-half {
-      order:2;
-      justify-content: flex-end;
-    }
-  
-    .signup-form-image-half {
-      order:1;
-    }
-  }
-
-  .full-signup-form-section {
-
-    .signup-form-text-half-inner {
-      padding: 50px 25px 70px 25px;
-    }
-
-    .signup-form-image-half {
-      min-height:300px;
-    }
-  }  
 }

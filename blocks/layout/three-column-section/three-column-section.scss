@@ -1,0 +1,91 @@
+$black: #000000;
+
+$white: #ffffff;
+$offWhite: #f8f9fb;
+$offOffWhite: #e7ebf2;
+$offOffDark: #cdd3df;
+
+$textGray: #223643;
+$brandGray: #38576b;
+
+$darkPurple: #bd338d;
+$lightPurple: #eb4db4;
+$lightGreen: #dbf266;
+$darkGreen: #b9d42f;
+$darkYellow: #ffd407;
+$lightYellow: #ffea82;
+$lightBlue: #7bd8fa;
+$darkBlue: #46c3f1;
+
+.three-column-section {
+  .content {
+  }
+}
+
+.three-column-left,
+.three-column-right,
+.three-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 45px;
+  img,
+  svg {
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+  svg {
+  }
+
+  img {
+  }
+  h3 {
+    max-width: 320px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-weight: 200;
+    max-width: 320px;
+  }
+  .seemax-button {
+    margin-top: 30px;
+  }
+}
+
+.blue-text-section {
+  // h3 {
+  //   color: $darkBlue;
+  // }
+}
+
+.green-text-section {
+  // h3 {
+  //   color: $darkGreen;
+  // }
+}
+
+.yellow-text-section {
+  // h3 {
+  //   color: $darkYellow;
+  // }
+}
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+  .three-column-section {
+  }
+}
+
+// 768px And Below
+@media screen and (max-width: 768px) {
+  .three-column-section {
+    .three-column-left,
+    .three-column-right {
+      padding: 0px 0px;
+    }
+    .three-column-left,
+    .three-column-center {
+      margin-bottom: 100px;
+    }
+  }
+}

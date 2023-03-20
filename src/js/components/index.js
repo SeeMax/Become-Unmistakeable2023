@@ -5,21 +5,14 @@ export {
   externalLinks,
   smoothScrolling,
   mobileNavSetup,
-  navSearchSetup
-} from './pageSetup.js'
+  // navSearchSetup,
+  menuItemSetup,
+} from "./pageSetup.js";
 
-export {
-  menuToggle
-} from './menuToggle.js'
+export { menuToggle } from "./menuToggle.js";
 
-export {
-  gsapRegisters
-} from './gsapRegisters.js'
+export { gsapRegisters } from "./gsapRegisters.js";
 
-export {
-  clickEvents,
-} from './clickEvents.js'
+export { clickEvents } from "./clickEvents.js";
 
-export {
-  searchReveal,
-} from './searchReveal.js'
+// export { searchReveal } from "./searchReveal.js";

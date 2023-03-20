@@ -3,39 +3,72 @@
     "title": "Hero Section",
     "fields": [
         {
-            "key": "field_620e91aefa7fb",
-            "label": "Hero Slide",
-            "name": "hero_slide",
-            "type": "repeater",
+            "key": "field_640f7fcac238b",
+            "label": "Image Half",
+            "name": "image_half",
+            "aria-label": "",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
+            "relevanssi_exclude": 0,
             "layout": "block",
-            "button_label": "Add A Slide",
             "sub_fields": [
                 {
-                    "key": "field_620e91c9fa7fc",
-                    "label": "Slide Image",
-                    "name": "image",
-                    "type": "image",
+                    "key": "field_640f805a66f58",
+                    "label": "Image Type",
+                    "name": "image_type",
+                    "aria-label": "",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
+                    "relevanssi_exclude": 0,
+                    "choices": {
+                        "img": "Uploaded Image",
+                        "svg": "Raw SVG Code"
+                    },
+                    "default_value": "img",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_620e91c9fa7fc",
+                    "label": "Uploaded Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640f805a66f58",
+                                "operator": "==",
+                                "value": "img"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
                     "return_format": "array",
-                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -43,27 +76,119 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "preview_size": "medium"
                 },
                 {
-                    "key": "field_620e91eafa7fd",
-                    "label": "Slide Text",
-                    "name": "slide_text",
+                    "key": "field_640f803566f57",
+                    "label": "SVG Code",
+                    "name": "svg_code",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640f805a66f58",
+                                "operator": "==",
+                                "value": "svg"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_620e91eafa7fd",
+            "label": "Text Half",
+            "name": "text_half",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_620e9203fa7fe",
+                    "label": "Headline",
+                    "name": "headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_620e9217fa7ff",
+                    "label": "Body Copy",
+                    "name": "body",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_620e9244fa800",
+                    "label": "Button",
+                    "name": "button",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
-                        "class": "",
+                        "width": "",
+                        "class": "button_color",
                         "id": ""
                     },
+                    "relevanssi_exclude": 0,
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_620e9203fa7fe",
-                            "label": "Headline",
-                            "name": "headline",
+                            "key": "field_620e924efa801",
+                            "label": "Button Text",
+                            "name": "button_text",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -80,10 +205,11 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_620e9217fa7ff",
-                            "label": "Body Copy",
-                            "name": "body",
-                            "type": "wysiwyg",
+                            "key": "field_620e9263fa802",
+                            "label": "Button Destination",
+                            "name": "button_destination",
+                            "aria-label": "",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -93,16 +219,17 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_620e9244fa800",
-                            "label": "Button",
-                            "name": "button",
-                            "type": "group",
+                            "key": "field_64113fb4bcb7f",
+                            "label": "Button Color",
+                            "name": "button_color",
+                            "aria-label": "",
+                            "type": "radio",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -111,47 +238,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_620e924efa801",
-                                    "label": "Button Text",
-                                    "name": "button_text",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_620e9263fa802",
-                                    "label": "Button Destination",
-                                    "name": "button_destination",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                }
-                            ]
+                            "relevanssi_exclude": 0,
+                            "choices": {
+                                "purple": "Purple",
+                                "blue": "Blue"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
                         }
                     ]
                 }
@@ -176,5 +273,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645122177
+    "modified": 1678852568
 }

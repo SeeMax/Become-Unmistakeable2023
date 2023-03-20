@@ -1,173 +1,93 @@
-$black:#231F20;
-$white:#FFFFFF;
-$offWhite:#f2f3f4;
-$gray:#4a5155;
-$highlight:#CBF600;
+$black: #000000;
 
+$white: #ffffff;
+$offWhite: #f8f9fb;
+$offOffWhite: #e7ebf2;
+$offOffDark: #cdd3df;
+
+$textGray: #223643;
+$brandGray: #38576b;
+
+$darkPurple: #bd338d;
+$lightPurple: #eb4db4;
+$lightGreen: #dbf266;
+$darkGreen: #b9d42f;
+$darkYellow: #ffd407;
+$lightYellow: #ffea82;
+$lightBlue: #7bd8fa;
+$darkBlue: #46c3f1;
 .hero-section {
-  overflow: hidden;
-  text-align:center;
-  color:white;
-
+  padding-bottom: 130px;
   .content {
     align-items: center;
+  }
+  .hero-image-half {
+  }
+
+  .hero-text-half {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    padding-top:100px;
-    padding-bottom:100px;
+    align-items: flex-start;
+    padding-left: 70px;
   }
 
-  .hero-overlay {
-    background:rgba(0,0,0,0.3);
-  }
-
-  h1 {  
-    margin-bottom:.5rem;
+  h1 {
+    margin-bottom: 12px;
   }
 
   p {
-    max-width:850px;
+    max-width: 550px;
   }
 
   .seemax-button {
-    margin-top:1.5rem;
-  }
-  
-  .hero-slider-container {
-    width:100%;
-  }
-
-  .single-hero-section-slide {
-    height:100%;
-  }
-
-  .slick-track {
-    display: flex !important;
-  }
-
-  .slick-slide {
-    height: inherit !important;
-  }
-
-  .slick-slide > div { 
-    height: 100%; 
-  }
-
-  .slick-prev, .slick-next {
-    
-    z-index:1000;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width:50px;
-    height:50px;
-    left:0;
-    color: transparent;
-    background:pink1;
-    font-weight:800;
-    line-height:1;
-    font-size:24px;
-    cursor:pointer;
-    padding-bottom: 4px;
-    text-align:center;
-    border: none;
-    outline: none;
-    opacity:0.1;
-    transition:opacity .6s ease;
-
-
-    &:before {
-      font-weight:100;
-      font-size:30px;
-      width:40px;
-      height:50px;
-      position: absolute;
-      left:0px;
-      top:.25em;
-      content:">";
-      width:100%;
-      
-    }
-  }
-    
-  .slick-prev {
-    &:before {
-      content:"<";
-    }
-  }
-  
-  .slick-next {
-    left:auto;
-    right:0;
-  }
-
-  .slick-dots {
-    position: absolute;
-    top:calc(100% - 50px);
-    bottom:auto;
-    left:0;
-    width:100%;
-    
-    li {
-
-      &:before {
-        content:"";
-        width:10px;
-        height:10px;
-        top:5px;
-        left:5px;
-        border-radius:20px;
-        background-color:white;
-        opacity:0.3;
-        transition:all .3s ease;
-      }
-
-      button {
-        opacity:0;
-      }
-    }
-
-    li.slick-active {
-
-      &:before {
-        opacity:1;
-      }
-    }
-  }
-
-  &:hover {
-    
-    .slick-prev, .slick-next {
-      opacity:1;
-    }
-  }
-
-  .slick-dotted.slick-slider {
-    margin-bottom:0;
+    margin-top: 50px;
   }
 }
 
+.hero-section-blue {
+  .seemax-button {
+    background-color: $darkBlue;
 
-
-// 1024px And Below
-@media screen and (max-width: 1024px){
-
-  .hero-section {
-
-
-    .content {
-
+    &:after {
+      background: $lightBlue;
     }
 
-    .slick-prev, .slick-next {
+    &:before {
+      background: $lightBlue;
+    }
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    .content {
+      align-items: flex-start;
+    }
+
+    .slick-prev,
+    .slick-next {
       display: none !important;
     }
   }
 }
 
-// 767px And Below
-@media screen and (max-width: 767px){
-
+// 768px And Below
+@media screen and (max-width: 768px) {
   .hero-section {
+    padding-top: 60px;
+    .hero-image-half {
+      margin: 0px auto 40px auto;
+      max-width: 500px;
+    }
 
+    .hero-text-half {
+      padding-left: 0px;
+    }
+
+    .seemax-button {
+      margin-top: 35px;
+    }
   }
 }

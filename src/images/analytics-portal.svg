@@ -1,0 +1,12 @@
+<svg id="analytics-portal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 374.31">
+<defs>
+<style>
+.analytics-portal-1{fill:#fff;}.analytics-portal-2{fill:#b9d42f;}.analytics-portal-3{fill:#dbf266;}</style>
+</defs>
+<ellipse id="circle-bottom" class="analytics-portal-2" cx="192.11" cy="217.1" rx="157.89" ry="157.21"/>
+<ellipse id="circle-top" class="analytics-portal-3" cx="175" cy="157.21" rx="157.89" ry="157.21"/>
+<ellipse id="circle-white-center" class="analytics-portal-1" cx="157.89" cy="199.79" rx="157.89" ry="157.21"/>
+<g id="icon">
+<path class="analytics-portal-2" d="m117.52,159.74c0-3.17-2.57-5.74-5.76-5.74s-5.76,2.56-5.76,5.74v63.11c0,6.33,5.17,11.47,11.52,11.47h34.56v-11.47h-34.56v-40.16h34.56v-11.47h-34.56v-11.47Zm40.32,28.68c0,3.17,2.57,5.74,5.76,5.74h40.32c3.19,0,5.76-2.56,5.76-5.74v-22.95c0-3.17-2.57-5.74-5.76-5.74h-17.77c-1.53,0-2.99-.61-4.07-1.68l-2.39-2.37c-1.08-1.07-2.54-1.68-4.07-1.68h-12.02c-3.19,0-5.76,2.56-5.76,5.74v28.68Zm0,51.63c0,3.17,2.57,5.74,5.76,5.74h40.32c3.19,0,5.76-2.56,5.76-5.74v-22.95c0-3.17-2.57-5.74-5.76-5.74h-17.77c-1.53,0-2.99-.61-4.07-1.68l-2.39-2.38c-1.08-1.08-2.54-1.69-4.07-1.69h-12.02c-3.19,0-5.76,2.56-5.76,5.74v28.7Z"/>
+</g>
+</svg>

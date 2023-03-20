@@ -1,0 +1,137 @@
+$black: #000000;
+
+$white: #ffffff;
+$offWhite: #f8f9fb;
+$offOffWhite: #e7ebf2;
+$offOffDark: #cdd3df;
+
+$textGray: #223643;
+$brandGray: #38576b;
+
+$darkPurple: #bd338d;
+$lightPurple: #eb4db4;
+$lightGreen: #dbf266;
+$darkGreen: #b9d42f;
+$darkYellow: #ffd407;
+$lightYellow: #ffea82;
+$lightBlue: #7bd8fa;
+$darkBlue: #46c3f1;
+
+.image-text-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 160px 0 170px 0;
+}
+
+.image-text-left-side,
+.image-text-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 50px;
+  img,
+  svg {
+    max-width: 100%;
+  }
+  svg {
+  }
+
+  img {
+  }
+
+  .preheadline {
+    margin-bottom: 8px;
+  }
+
+  h5 {
+    color: $lightPurple;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    font-weight: 200;
+    max-width: 480px;
+    margin-top: 0.5em;
+  }
+  .seemax-button {
+    margin-top: 30px;
+  }
+}
+
+.image-text-right-side {
+  align-items: center;
+}
+
+.left-image-section {
+  .image-text-left-side {
+    order: 1;
+    align-items: center;
+  }
+
+  .image-text-right-side {
+    order: 2;
+    align-items: flex-start;
+  }
+}
+
+.blue-text-section {
+  h5 {
+    color: $darkBlue;
+  }
+}
+
+.green-text-section {
+  h5 {
+    color: $darkGreen;
+  }
+}
+
+.yellow-text-section {
+  h5 {
+    color: $darkYellow;
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+  .image-text-section {
+  }
+}
+
+// 768px And Below
+@media screen and (max-width: 768px) {
+  .image-text-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 90px 0 100px 0;
+  }
+  .image-text-left-side,
+  .image-text-right-side {
+    padding: 0px 0px;
+    img,
+    svg {
+      max-width: 100%;
+    }
+  }
+
+  .image-text-left-side {
+    margin-bottom: 60px;
+  }
+  .image-text-right-side {
+    margin-bottom: 0px;
+    align-items: flex-start;
+  }
+
+  .left-image-section {
+    .image-text-left-side {
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+
+    .image-text-right-side {
+      margin-bottom: 0px;
+    }
+  }
+}

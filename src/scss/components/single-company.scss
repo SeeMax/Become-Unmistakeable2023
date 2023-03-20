@@ -1,0 +1,272 @@
+@import "colors";
+
+.single-company-page {
+  h5 {
+    color: $darkYellow;
+  }
+}
+
+.single-co-hero {
+  text-align: center;
+  background: white;
+  padding-bottom: 120px;
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h5 {
+    color: $darkYellow;
+    margin-bottom: 20px;
+  }
+  h1 {
+    max-width: 800px;
+    margin-bottom: 60px;
+  }
+  h6 {
+    max-width: 440px;
+  }
+}
+
+.single-co-prob-opp {
+  background-color: $brandGray;
+  color: white;
+
+  .content {
+    align-items: center;
+  }
+
+  h5 {
+  }
+
+  h6 {
+    max-width: 500px;
+  }
+}
+.prob-opp-text-half {
+}
+.prob-opp-group {
+  margin-bottom: 60px;
+  h5 {
+    margin-bottom: 7px;
+  }
+  h6 {
+  }
+}
+
+.prob-opp-image-half {
+  position: relative;
+  padding-left: 70px;
+  svg {
+  }
+
+  .logo-portal-1 {
+    fill: white;
+  }
+
+  .logo-portal-2 {
+    fill: #223643;
+  }
+  img {
+    // border: 1px solid red;
+    position: absolute;
+    left: 0;
+    right: calc(10% - 70px);
+    margin: auto;
+    height: 100px;
+    top: calc(50% - 40px);
+  }
+}
+
+.single-co-solver {
+  text-align: center;
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  h5 {
+    margin-bottom: 36px;
+  }
+
+  img {
+    max-width: 200px;
+    margin-bottom: 30px;
+  }
+}
+
+.single-co-results {
+  background-color: $brandGray;
+  color: white;
+  padding-bottom: 50px;
+
+  .content {
+    flex-wrap: wrap;
+    // justify-content:flex-start;
+  }
+
+  h5 {
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    position: relative;
+    line-height: 1.2;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 18px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $darkYellow;
+    }
+  }
+
+  .results-area {
+    display: flex;
+    flex-wrap: wrap;
+
+    .single-result {
+      position: relative;
+      margin-bottom: 70px;
+      padding-right: 60px;
+
+      &:nth-child(3n + 2) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-right: 0;
+        padding-left: 60px;
+      }
+    }
+  }
+}
+
+.single-co-feedback {
+  background-color: white;
+  padding-bottom: 50px;
+  .content {
+    flex-wrap: wrap;
+    // justify-content: center;
+  }
+
+  h5 {
+    margin-bottom: 30px;
+  }
+
+  .feedback-area {
+    display: flex;
+    flex-wrap: wrap;
+
+    .single-feedback {
+      position: relative;
+      // font-weight: 200;
+      margin-bottom: 70px;
+      padding-right: 40px;
+
+      &:nth-child(3n + 2) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-right: 0;
+        padding-left: 40px;
+      }
+
+      span {
+        position: relative;
+      }
+    }
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 885px) {
+  .single-co-hero {
+    padding-top: 70px;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .single-co-prob-opp {
+    padding: 50px 0;
+  }
+  .prob-opp-text-half {
+    order: 2;
+  }
+
+  .prob-opp-image-half {
+    order: 1;
+    padding-left: 0px;
+    margin-bottom: 50px;
+  }
+
+  .single-co-results {
+    padding-bottom: 50px;
+
+    h4 {
+      padding-left: 25px;
+      &:after {
+        left: 0px;
+        top: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $darkYellow;
+      }
+    }
+
+    .results-area {
+      .single-result {
+        margin-bottom: 50px;
+        padding-right: 0px;
+
+        &:nth-child(3n + 2) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+        &:nth-child(3n + 3) {
+          padding-right: 0;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  .single-co-feedback {
+    padding-bottom: 50px;
+
+    .feedback-area {
+      .single-feedback {
+        margin-bottom: 50px;
+        padding-right: 0px;
+
+        &:nth-child(3n + 2) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+
+        &:nth-child(3n + 3) {
+          padding-right: 0;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+// 768px And Below
+@media screen and (max-width: 768px) {
+}

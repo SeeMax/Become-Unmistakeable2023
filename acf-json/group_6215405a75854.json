@@ -1,108 +1,96 @@
 {
     "key": "group_6215405a75854",
-    "title": "Signup Form Section",
+    "title": "Contact Form Section",
     "fields": [
-        {
-            "key": "field_6215405a833d0",
-            "label": "Background Color",
-            "name": "background_color",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "black": "Black",
-                "white": "White",
-                "highlight": "Highlight"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
         {
             "key": "field_6215405a833de",
             "label": "Headline",
             "name": "headline",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "70",
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
-            "key": "field_6215405a833ec",
-            "label": "Subheadline",
-            "name": "subheadline",
-            "type": "text",
+            "key": "field_64112b1e6d659",
+            "label": "Form Color",
+            "name": "form_color",
+            "aria-label": "",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6215405a833f9",
-            "label": "Body Copy",
-            "name": "body",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
+            "relevanssi_exclude": 0,
+            "choices": {
+                "purple": "Purple",
+                "blue": "Blue",
+                "green": "Green"
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
             "key": "field_621540919c8d3",
-            "label": "Form Embed Code",
-            "name": "form_embed_code",
-            "type": "textarea",
-            "instructions": "Go to \"Audience\" -> \"Signup Forms\" in Mailchimp.<br>Select \"Embedded Forms\" from the options.<br>Select \"Settings\" and check the \"Disable Javascript\" box.<br>Click the \"Continue\" button in the top right.<br>\r\nCopy the \"Embedded Form Code\" and paste it here.",
+            "label": "Contact Form Short Code",
+            "name": "short_code",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Paste the Contact Form shortcode here.<br>\r\nFrom \"Contact\" in the black menu to the left.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "default_value": "",
-            "placeholder": "",
             "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_641136e3d991e",
+            "label": "Form Anchor",
+            "name": "form_anchor",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Use a single word with all lower case letters<br>\r\nThis can be used with a button elsewhere on the page to scroll to this section<br>\r\nMake the button destination elsewhere this word (preceded by a #).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -123,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645560536
+    "modified": 1678850511
 }

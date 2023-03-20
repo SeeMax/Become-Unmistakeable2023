@@ -3,83 +3,10 @@
     "title": "Contact + Social Options",
     "fields": [
         {
-            "key": "field_6182c3ae4fc43",
-            "label": "Contact Info",
-            "name": "contact_info",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_6182c3be4fc44",
-                    "label": "Phone Number",
-                    "name": "phone_number",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.3",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6182c3d64fc45",
-                    "label": "Address",
-                    "name": "address",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.3",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_6182c3e34fc46",
-                    "label": "Contact Email",
-                    "name": "contact_email",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.3",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
             "key": "field_6182c4094fc47",
             "label": "Social Info",
             "name": "social_info",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -95,79 +22,87 @@
                     "key": "field_6182c4094fc48",
                     "label": "Facebook Link",
                     "name": "facebook",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "33.3",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
+                    "relevanssi_exclude": 0,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_6182c4094fc49",
                     "label": "Twitter Link",
                     "name": "twitter",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "33.3",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
+                    "relevanssi_exclude": 0,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_6182c4094fc4a",
                     "label": "Instagram Link",
                     "name": "instagram",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "33.3",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
+                    "relevanssi_exclude": 0,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
+                },
+                {
+                    "key": "field_641097998a8c1",
+                    "label": "LinkedIn Link",
+                    "name": "linkedin",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
-        },
-        {
-            "key": "field_620e7f8e02e80",
-            "label": "Mailchimp Form",
-            "name": "mailchimp_form",
-            "type": "textarea",
-            "instructions": "Go to \"Embedded Forms\" in Mailchimp.<br>\r\nSelect \"Unstyled\" from the tabs at the top.<br>\r\nCopy the \"Embedded Form Code\" and paste it here.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
         }
     ],
     "location": [
@@ -188,5 +123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645117436
+    "modified": 1678809007
 }

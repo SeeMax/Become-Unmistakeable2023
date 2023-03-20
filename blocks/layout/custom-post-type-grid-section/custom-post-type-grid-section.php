@@ -31,46 +31,55 @@ if( !empty($block['align']) ) {
     <?php get_template_part( 'partials/_ajax-loader' ); ?>
     <div class="custom-post-type-popup CPTPopup">
       <div class="custom-post-type-popup-close CPTPopupClose">x</div>
-      <!-- AJAX DATA GOES HERE -->
-      <div class="custom-post-type-pop-up-image c-width-30">
-      </div>
-      <div class="custom-post-type-pop-up-text c-width-70">
-        <h3></h3>
-        <h5></h5> 
-        <p></p>
+      <div class="custom-post-type-popup-inner">
+        <!-- AJAX DATA GOES HERE -->
+        <div class="custom-post-type-pop-up-image c-width-30">
+        </div>
+        <div class="custom-post-type-pop-up-text c-width-70">
+          <h2></h2>
+          <h4></h4>
+          <p></p>
+          <div class="linkedin"></div>
+        </div>
       </div>
     </div>
 
     <?php $sectionTitle = get_field('grid_title');?>
     <?php if($sectionTitle):?>
-      <h2 class="grid-title"><?php echo get_field('grid_title');?></h2>
+    <h1 class="grid-title"><?php echo get_field('grid_title');?></h1>
     <?php endif;?>
-     
-    <div class="custom-post-type-grid-container CPTGridContainer"> 
+
+    <div class="custom-post-type-grid-container CPTGridContainer">
       <?php $featured_posts = get_field('posts_to_show');?>
       <?php if( $featured_posts ): ?>
 
-        <?php foreach( $featured_posts as $featured_post ): ?>
-          <?php $headline = get_the_title($featured_post->ID);?>
-          <?php $subheadline = get_field('subheadline', $featured_post->ID);?>
-          <?php $body = get_field('body', $featured_post->ID);?>
-          <?php $image = get_field('image', $featured_post->ID);?>
-        
-          <div class="single-custom-post-type-grid-item singleCPTGridItem c-width-32" data-cpt-popup=<?php echo $featured_post->ID;?>>  
-            <div class="team-image-mask background-image-section" 
-            style="background-image:url(
-            <?php if ( $image != '' ):?>
-              <?php echo $image['url'];?>
-            <?php else:?>
-              <?php echo catch_that_image();?>
-            <?php endif;?>
-            );">
-            </div>
-            <h3><?php echo $headline;?></h3>
-            <h5><?php echo $subheadline;?></h5>
-            <?php echo $body;?>
-          </div>
-        <?php endforeach; ?>
+      <?php foreach( $featured_posts as $featured_post ): ?>
+      <?php $headline = get_the_title($featured_post->ID);?>
+      <?php $bio = get_field('biography', $featured_post->ID);?>
+      <?php if( have_rows('bio_details', $featured_post->ID) ): ?>
+      <?php while( have_rows('bio_details', $featured_post->ID) ): the_row();?>
+
+
+      <?php $image = get_sub_field('image', $featured_post->ID);?>
+      <?php $title = get_sub_field('title', $featured_post->ID);?>
+      <?php $linkedin = get_sub_field('linkedin', $featured_post->ID);?>
+      <?php endwhile;?>
+      <?php endif;?>
+
+      <div class="single-custom-post-type-grid-item singleCPTGridItem" data-cpt-popup=<?php echo $featured_post->ID;?>>
+        <div class="team-image-mask">
+          <div class="image-background-circle"></div>
+          <div class="image-background-circle image-background-circle-2"></div>
+          <div class="background-image-section" style="background-image:url(  
+            <?php echo $image['url'];?>
+          );"></div>
+        </div>
+        <h5><?php echo $headline;?></h5>
+        <h6><?php echo $title;?></h6>
+        <h6 class="full-bio-link fullBioLink">Full Bio</h6>
+      </div>
+
+      <?php endforeach; ?>
       <?php endif; ?>
     </div>
   </div>

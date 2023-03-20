@@ -477,14 +477,35 @@ function is_post_type($type){
 /* CUSTOM POST TYPES  */
 function seemax_blocks_create_post_type() {
 
-  register_post_type('custom_post_type',
+  register_post_type('bios',
     array(
       'labels' => array(
-        'name' => __('Custom Post Types'),
-        'singular_name' => __('Custom Post Type')
+        'name' => __('Bios'),
+        'singular_name' => __('Bio'),
+        'add_new_item' => __( 'Add Bio' ),
+            'add_new' => __( 'Add Bio' ),
+            'edit_item' => __( 'Edit Bio' )
       ),
       'public' => true,
       'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+      'has_archive' => true,
+      'show_in_rest'=> true,
+      //  
+      // 'supports' => array('title','editor'),
+    )
+  );
+
+  register_post_type('companies',
+    array(
+      'labels' => array(
+        'name' => __('Companies'),
+        'singular_name' => __('Company'),
+        'add_new_item' => __( 'Add Company' ),
+            'add_new' => __( 'Add Company' ),
+            'edit_item' => __( 'Edit Company' )
+      ),
+      'public' => true,
+      'menu_icon' => 'dashicons-businessman',
       'has_archive' => true,
       'show_in_rest'=> true,
       //  
@@ -510,30 +531,30 @@ function seemax_blocks_create_post_type() {
 
 
 /* 	CPT TAXONOMIES 	*/
-function add_cpt_taxonomies() {
-  $labels = array(
-   'name'            => 'CPT Type',
-   'singular_name'   => 'CPT Type',
-   'search_items'    => 'Search CPT Type',
-   'edit_item'       => 'Edit CPT Type',
-   'update_item'     => 'Update CPT Type',
-   'add_new_item'     => 'Add New CPT Type',
-   'new_item_name'    => 'New CPT Type',
-   'menu_name'        => 'CPT Types',
-  );
-  $args = array(
-   'labels'            => $labels,
-   'public'            =>  true,
-   'hierarchical'      =>  true,
-   'tax_position' => true,
-   'show_in_nav_menus' =>  true,
-  	'has_archive'       =>  true,
-   'show_ui'           =>  true,
-   'show_admin_column' =>  true,
-   'rewrite'           =>  array('slug' => 'member-type', 'with_front' => false),
-  );
-  register_taxonomy('member-type', array('custom_post_type'), $args);
-} add_action('init', 'add_cpt_taxonomies');
+// function add_cpt_taxonomies() {
+//   $labels = array(
+//    'name'            => 'CPT Type',
+//    'singular_name'   => 'CPT Type',
+//    'search_items'    => 'Search CPT Type',
+//    'edit_item'       => 'Edit CPT Type',
+//    'update_item'     => 'Update CPT Type',
+//    'add_new_item'     => 'Add New CPT Type',
+//    'new_item_name'    => 'New CPT Type',
+//    'menu_name'        => 'CPT Types',
+//   );
+//   $args = array(
+//    'labels'            => $labels,
+//    'public'            =>  true,
+//    'hierarchical'      =>  true,
+//    'tax_position' => true,
+//    'show_in_nav_menus' =>  true,
+//   	'has_archive'       =>  true,
+//    'show_ui'           =>  true,
+//    'show_admin_column' =>  true,
+//    'rewrite'           =>  array('slug' => 'member-type', 'with_front' => false),
+//   );
+//   register_taxonomy('member-type', array('custom_post_type'), $args);
+// } add_action('init', 'add_cpt_taxonomies');
 
 // function add_reports_taxonomies() {
 //   $labels = array(
@@ -564,7 +585,7 @@ function add_cpt_taxonomies() {
 // Disable Guttenberg Blocks for a Custom Post Type / Normal Post / Pages / Etc.
 add_filter('use_block_editor_for_post_type', function( $useBlockEditor, $postType ){
 
-  if($postType == 'custom_post_type' || $postType == 'post')
+  if($postType == 'bios' || $postType == 'companies' || $postType == 'post')
   // if($postType == 'custom_post_type')
       return false;
   return $useBlockEditor;
@@ -575,9 +596,13 @@ add_filter('use_block_editor_for_post_type', function( $useBlockEditor, $postTyp
 function wpb_change_title_text( $title ){
   $screen = get_current_screen();
 
-  if  ( 'custom_post_type' == $screen->post_type ) {
-       $title = 'Enter Custom Post Type Name';
+  if  ( 'bios' == $screen->post_type ) {
+       $title = 'Enter Name';
   }
+
+  if  ( 'companies' == $screen->post_type ) {
+    $title = 'Enter Company Name';
+}
 
   // if  ( 'reports' == $screen->post_type ) {
   //   $title = 'Enter Report Title';
@@ -628,9 +653,24 @@ function register_acf_block_types() {
   ));
 
   acf_register_block_type(array(
+    'name'              => 'three-column-section',
+    'title'             => __('Three Column Section'),
+    'description'       => __('Add A Section with Three columns'),
+    'category'          => 'layout',
+    'icon'              => 'id',
+    'keywords'          => array( 'basic', 'text', 'image'),
+    'mode'               => 'auto',
+    'align'             => 'full',
+    'supports'          => array( 'align' =>false ),
+    'render_template'   => get_template_directory() . '/blocks/layout/three-column-section/three-column-section.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/three-column-section/three-column-section.css',
+    'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/three-column-section.js'
+  ));
+
+  acf_register_block_type(array(
     'name'              => 'half-half-section',
-    'title'             => __('Half Text / Image Section'),
-    'description'       => __('Add A Half-Text / Half-Image Block'),
+    'title'             => __('Half and Half Section'),
+    'description'       => __('Add A Split Section with two columns of Image and Text'),
     'category'          => 'layout',
     'icon'              => 'id',
     'keywords'          => array( 'basic', 'text', 'image'),
@@ -640,6 +680,21 @@ function register_acf_block_types() {
     'render_template'   => get_template_directory() . '/blocks/layout/half-half-section/half-half-section.php',
     'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/half-half-section/half-half-section.css',
     'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/half-half-section.js'
+  ));
+
+  acf_register_block_type(array(
+    'name'              => 'image-text-split-section',
+    'title'             => __('Image / Text Split Section'),
+    'description'       => __('Add A Split Section with Image on One side and Text on the other'),
+    'category'          => 'layout',
+    'icon'              => 'columns',
+    'keywords'          => array( 'basic', 'text', 'image'),
+    'mode'               => 'auto',
+    'align'             => 'full',
+    'supports'          => array( 'align' =>false ),
+    'render_template'   => get_template_directory() . '/blocks/layout/image-text-split-section/image-text-split-section.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/image-text-split-section/image-text-split-section.css',
+    'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/image-text-split-section.js'
   ));
 
   acf_register_block_type(array(
@@ -659,8 +714,8 @@ function register_acf_block_types() {
 
   acf_register_block_type(array(
     'name'              => 'signup-form-section',
-    'title'             => __('Signup Form Section'),
-    'description'       => __('Add A Signup Form'),
+    'title'             => __('Contact Form Section'),
+    'description'       => __('Add A Contact Form'),
     'category'          => 'layout',
     'icon'              => 'edit-page',
     'keywords'          => array( 'signup', 'form'),
@@ -686,6 +741,21 @@ function register_acf_block_types() {
     'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/full-width-section/full-width-section.css',
     'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/full-width-section.js'
   ));
+
+  acf_register_block_type(array(
+    'name'              => 'quote-section',
+    'title'             => __('Company Carousel Section'),
+    'description'       => __('Add A Carousel of Companies'),
+    'category'          => 'layout',
+    'icon'              => 'businessman',
+    'keywords'          => array( 'highlight'),
+    'mode'               => 'auto',
+    'align'             => 'full',
+    'supports'          => array( 'align' =>false ),
+    'render_template'   => get_template_directory() . '/blocks/layout/quote-section/quote-section.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/quote-section/quote-section.css',
+    'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/quote-section.js'
+  ));
 }
 
 // ADD MAIN STYLE SHEET TO ADMIN AREA FOR PROPER GUTTENBERG STYLING //
@@ -698,9 +768,12 @@ function seemax_gutenberg_css(){
       '/blocks/layout/hero-section/hero-section.css',
       '/blocks/layout/posts-preview-section/posts-preview-section.css',
       '/blocks/layout/half-half-section/half-half-section.css',
+      '/blocks/layout/three-column-section/three-column-section.css',
       '/blocks/layout/custom-post-type-grid-section/custom-post-type-grid-section.css',
       '/blocks/layout/signup-form-section/signup-form-section.css',
       '/blocks/layout/full-width-section/full-width-section.css',
+      '/blocks/layout/quote-section/quote-section.css',
+      '/blocks/layout/image-text-split-section/image-text-split-section.css'
     )
  ); 
 }
@@ -741,10 +814,13 @@ function seemax_allowed_block_types( $allowed_blocks, $post ) {
 		$allowed_blocks = array(
   		'acf/hero-section',
       'acf/posts-preview-section',
-      'acf/half-half-section',
+      'acf/three-column-section',
       'acf/custom-post-type-grid-section',
       'acf/signup-form-section',
       'acf/full-width-section',
+      'acf/quote-section',
+      'acf/image-text-split-section',
+      'acf/half-half-section'
       // 'core/paragraph',
       // 'core/image',
       // 'core/heading',
@@ -834,55 +910,54 @@ function catch_that_image() {
   ob_start();
   ob_end_clean();
   $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
+$first_img = $matches[1][0];
 
-  if(empty($first_img)) {
-    $first_img = get_template_directory_uri() . "/dist/images/default-image.jpg";
-  }
-  return $first_img;
+if(empty($first_img)) {
+$first_img = get_template_directory_uri() . "/dist/images/default-image.jpg";
+}
+return $first_img;
 }
 
 // // Change dashboard Posts Label
 // add_action( 'init', 'cp_change_post_object' );
 // function cp_change_post_object() {
-//     $get_post_type = get_post_type_object('post');
-//     $labels = $get_post_type->labels;
-//         $labels->name = 'Insights';
-//         $labels->singular_name = 'Insight';
-//         $labels->add_new = 'Add Insight';
-//         $labels->add_new_item = 'Add Insight';
-//         $labels->edit_item = 'Edit Insight';
-//         $labels->new_item = 'Insight';
-//         $labels->view_item = 'View Insights';
-//         $labels->search_items = 'Search Insights';
-//         $labels->not_found = 'No Insights found';
-//         $labels->not_found_in_trash = 'No Insights found in Trash';
-//         $labels->all_items = 'All Insights';
-//         $labels->menu_name = 'Insights';
-//         $labels->name_admin_bar = 'Insights';
+// $get_post_type = get_post_type_object('post');
+// $labels = $get_post_type->labels;
+// $labels->name = 'Insights';
+// $labels->singular_name = 'Insight';
+// $labels->add_new = 'Add Insight';
+// $labels->add_new_item = 'Add Insight';
+// $labels->edit_item = 'Edit Insight';
+// $labels->new_item = 'Insight';
+// $labels->view_item = 'View Insights';
+// $labels->search_items = 'Search Insights';
+// $labels->not_found = 'No Insights found';
+// $labels->not_found_in_trash = 'No Insights found in Trash';
+// $labels->all_items = 'All Insights';
+// $labels->menu_name = 'Insights';
+// $labels->name_admin_bar = 'Insights';
 // }
 
 // // Change dashboard Posts Icon
 // function change_post_menu_label_icon() {
-//   global $menu;
-//   $menu[5][6] = 'dashicons-megaphone';
-//   echo '';
+// global $menu;
+// $menu[5][6] = 'dashicons-megaphone';
+// echo '';
 // }
 // add_action( 'admin_menu', 'change_post_menu_label_icon' );
 
 
 // // Move Jetpack Logos
 // function jptweak_remove_share() {
-//   remove_filter( 'the_content', 'sharing_display', 19 );
-//   remove_filter( 'the_excerpt', 'sharing_display', 19 );
-//   if ( class_exists( 'Jetpack_Likes' ) ) {
-//       remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
-//   }
+// remove_filter( 'the_content', 'sharing_display', 19 );
+// remove_filter( 'the_excerpt', 'sharing_display', 19 );
+// if ( class_exists( 'Jetpack_Likes' ) ) {
+// remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+// }
 // }
 
 // add_action( 'loop_start', 'jptweak_remove_share' );
 
-//////////////  SEEMAXWORK  ///////////////
-//// PROJECT SPECIFIC CUSTOMIZATION  /////
+////////////// SEEMAXWORK ///////////////
+//// PROJECT SPECIFIC CUSTOMIZATION /////
 /////////////////////////////////////////
-

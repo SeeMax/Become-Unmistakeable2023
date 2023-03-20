@@ -24,41 +24,42 @@ if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 ?>
-<?php
-  $CorI = get_field('color_or_image_background');  
-  $color = get_field('background_color');
-  $overlayColor = get_field('image_overlay_color');
-  $image = get_field('image');    
-  $headline = get_field('headline');
-  $subheadline = get_field('subheadline');
-  $body = get_field('body');
-  if( have_rows('button') ): while( have_rows('button') ) : the_row();
-    $btn_dest = get_sub_field('button_destination');
-    $btn_text = get_sub_field('button_text');
-  endwhile;endif;
-?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className);?> 
-  <?php if($CorI == 'color'):?>
-    <?php echo $color;?>-full-width-section">
-  <?php else:?>
-    background-image-section <?php echo $overlayColor;?>-image-overlay-section" style="background-image:url(<?php echo $image['url'];?>)">
-  <?php endif;?>
-  <div class="c-block-fill full-width-section-image-overlay"></div>
+<?php $backColor = get_field("background_color");?>
+<?php $textAlign = get_field("text_alignment");?>
+<section id="<?php echo esc_attr($id); ?>"
+  class="<?php echo esc_attr($className); ?> <?php echo $backColor;?>-background <?php echo $textAlign;?>-text-alignment">
   <div class="content">
-    <?php if($headline):?>
-      <h2><?php echo $headline;?></h2>
-    <?php endif;?>  
-    <?php if($subheadline):?>
-      <h4><?php echo $subheadline; ?></h4>
-    <?php endif;?>
-    <?php if($body):?>
-      <?php echo $body;?>
-    <?php endif;?>
-    <?php if($btn_text):?>
+    <?php if( have_rows('inner_content') ): while( have_rows('inner_content') ) : the_row();
+    $imageType = get_sub_field('image_type');
+    $image = get_sub_field('image');
+    $svgCode = get_sub_field('svg_code');
+    $headline = get_sub_field('headline');
+    $body = get_sub_field('body', false, false);
+    if( have_rows('button') ): while( have_rows('button') ) : the_row();
+      $btn_dest = get_sub_field('button_destination');
+      $btn_text = get_sub_field('button_text');
+    endwhile;endif;?>
+    <div class="full-width-inner">
+      <?php if ($imageType == 'img'):?>
+      <img src="<?php echo $image['url'];?>">
+      <?php else:?>
+      <?php echo $svgCode;?>
+      <?php endif;?>
+      <?php if($headline):?>
+      <h1>
+        <?php echo $headline;?>
+      </h1>
+      <?php endif;?>
+      <?php if($body):?>
+      <h6><?php echo $body;?></h6>
+      <?php endif;?>
+      <?php if($btn_text):?>
       <div class="seemax-button">
-        <a href="<?php echo $btn_dest;?>" class="c-block-fill"></a>
         <span><?php echo $btn_text;?></span>
+        <a href="<?php echo $btn_dest;?>" class="c-block-fill"></a>
       </div>
-    <?php endif;?>
+      <?php endif;?>
+    </div>
+    <?php endwhile;endif;?>
   </div>
 </section>

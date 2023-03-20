@@ -25,25 +25,22 @@ if( !empty($block['align']) ) {
 }
 ?>
 <?php
-  $color = get_field('background_color');
   $headline = get_field('headline');
-  $subheadline = get_field('subheadline');
-  $body = get_field('body');
-  $embed = get_field('form_embed_code');
+  $embed = get_field('short_code');
+  $color = get_field('form_color');
+  $anchor = get_field('form_anchor');
+
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className);?> <?php echo $color;?>-signup-form-section">
+<div id="<?php echo $anchor;?>"></div>
+<section id="<?php echo esc_attr($id);?>"
+  class="<?php echo esc_attr($className);?> <?php echo $color;?>-signup-form-section">
+
   <div class="content">
     <?php if($headline):?>
-      <h2><?php echo $headline;?></h2>
-    <?php endif;?>  
-    <?php if($subheadline):?>
-      <h4><?php echo $subheadline; ?></h4>
-    <?php endif;?>
-    <?php if($body):?>
-      <?php echo $body;?>
+    <h2><?php echo $headline;?></h2>
     <?php endif;?>
     <div class="signup-embed-code">
-      <?php echo $embed;?>
-    </div>  
+      <?php echo do_shortcode($embed);?>
+    </div>
   </div>
 </section>

@@ -2,14 +2,16 @@
 
 .header {
   position: relative;
-  font-size: 1em;
-  background: white;
+  font-size: 16px;
+  font-family: "Nexa";
+  font-weight: 800;
+  background: $offWhite;
 
   .content {
     position: relative;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     justify-content: space-between;
     align-content: center;
     align-items: center;
@@ -21,10 +23,11 @@
 
 .header-logo {
   position: relative;
-  width: 120px;
+  width: 180px;
   max-width: 50%;
 
   a {
+    text-decoration: none;
     &:after {
       display: none;
     }
@@ -39,11 +42,88 @@
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  background: white;
+  border-radius: 50px;
+  transition: all 0.3s ease-in;
 
   .menu-item {
     width: auto;
     position: relative;
-    margin-left: 2em;
+    padding: 15px 24px;
+    background: white;
+    border-right: 3px solid white;
+    overflow: hidden;
+
+    .menu-item-text {
+      position: relative;
+      display: inline-block;
+      z-index: 6;
+    }
+
+    .menu-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 5;
+      background: $lightPurple;
+      transition: all 0.3s ease-in;
+      border-radius: 50px;
+    }
+
+    .menu-circle-1 {
+      right: 100%;
+      border-radius: 0;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    .menu-circle-2 {
+      left: 100%;
+      border-radius: 0;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    &:nth-of-type(1) {
+      padding-left: 30px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    &:nth-last-of-type(2) {
+      padding: 15px 25px;
+      border-radius: 0;
+      border-right: 0px solid white;
+    }
+
+    &:nth-last-of-type(1) {
+      padding-left: 26px;
+      padding-right: 26px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    &:hover {
+      color: white;
+      .menu-circle-1 {
+        right: 0;
+        border-radius: 0;
+      }
+
+      .menu-circle-2 {
+        left: 0;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .nav-button {
+    border-left: 3px solid $offWhite;
+    .menu-circle-1,
+    .menu-circle-2 {
+      background: $darkPurple;
+    }
   }
 }
 
@@ -51,39 +131,6 @@
   display: flex;
   flex-wrap: wrap;
   height: auto;
-}
-
-.search-nav-item {
-  line-height: 1em;
-  margin-left: 2em;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.search-item-active {
-  color: $highlight;
-}
-
-// Height set to 0 in pageSetup.js
-.header-search-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 99;
-  overflow: hidden;
-  background: $highlight;
-
-  .content {
-    justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  h4 {
-    width: auto;
-  }
 }
 
 .mobile-menu {
@@ -96,29 +143,57 @@
 
 // 1024px And Below
 @media screen and (max-width: 1024px) {
-  .header {
-  }
-
   .main-nav {
     position: fixed;
-    transform: TranslateX(100%);
+    transform: translateX(-100%);
     left: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background: white;
-    // padding-bottom:10vh;
+    border-radius: 0;
     z-index: 100;
 
     .menu-item {
-      // opacity:0;
       width: auto;
-      margin: 0 0 4em 0;
+      margin: 0 0 20px 0;
       transition: none;
-      font-size: 1.2em;
+      font-size: 1.1em;
+      padding: 18px 50px 18px 60px;
+      border-right: 0px solid white;
+      background: $offWhite;
+      color: $textGray;
+      border-radius: 50px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
 
-      &:after {
+      .menu-circle {
         display: none;
+      }
+
+      &:nth-of-type(1) {
+        padding: 18px 50px 18px 60px;
+        border-radius: 50px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      &:nth-last-of-type(2) {
+        padding: 18px 50px 18px 60px;
+        border-radius: 50px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+
+      &:nth-last-of-type(1) {
+        padding: 18px 50px 18px 60px;
+        border-radius: 50px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border: 0px solid white;
+      }
+
+      &:hover {
+        color: $textGray;
       }
     }
   }
@@ -132,14 +207,14 @@
     height: 100%;
     // Mirror .content class from global.scss
     max-width: 1400px;
-    padding: 15vh 50px 10vh 50px;
+    padding: 110px 50px 10vh 0px;
   }
 
   .header-logo {
     z-index: 104;
 
     img {
-      width: 50px;
+      // width: 50px;
     }
   }
 
@@ -148,7 +223,7 @@
     position: absolute;
     // Calculate top as:
     // (header .content padding + .header-logo img height - .mobile-menu (this) height) / 2
-    top: 33px;
+    top: 38px;
     right: 50px;
     z-index: 103;
     width: 36px;
@@ -162,49 +237,43 @@
       height: 1px;
       width: 100%;
       // margin:9px 0 0 0;
-      background-color: black;
+      background-color: $textGray;
     }
-  }
-
-  .header-search-container {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    z-index: 104;
-
-    .content {
-      flex-direction: column;
-      padding-top: 25vh;
-    }
-
-    h4 {
-      margin-bottom: 1em;
-    }
-  }
-
-  .mobile-search-close {
-    color: $black;
-    display: inline-block;
-    position: absolute;
-    top: 33px;
-    right: 50px;
   }
 }
 
 @media screen and (max-width: 885px) {
 }
 
-// 767px And Below
-@media screen and (max-width: 767px) {
+// 768px And Below
+@media screen and (max-width: 768px) {
   .header {
   }
 
   .header-logo {
-    width: 80px;
+    // width: 80px;
+  }
+
+  .main-nav {
+    .menu-item {
+      padding: 18px 50px 18px 40px;
+
+      &:nth-of-type(1) {
+        padding: 18px 50px 18px 40px;
+      }
+
+      &:nth-last-of-type(2) {
+        padding: 18px 50px 18px 40px;
+      }
+
+      &:nth-last-of-type(1) {
+        padding: 18px 50px 18px 40px;
+      }
+    }
   }
 
   .main-nav-inner {
-    padding-left: 25px;
+    // padding-left: 25px;
     padding-right: 25px;
   }
 

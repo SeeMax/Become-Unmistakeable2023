@@ -1,15 +1,13 @@
-$black:#231F20;
-$white:#FFFFFF;
-$offWhite:#f2f3f4;
-$gray:#4a5155;
-$highlight:#CBF600;
-
+$black: #231f20;
+$white: #ffffff;
+$offWhite: #f2f3f4;
+$brandGray: #4a5155;
+$lightPurple: #cbf600;
 
 .posts-preview-section {
-
   h2 {
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
   }
 
   .content {
@@ -17,16 +15,13 @@ $highlight:#CBF600;
   }
 }
 
-// .single-post-preview and single-posts-preview-area style are in: 
+// .single-post-preview and single-posts-preview-area style are in:
 // src/scss/components/single-posts-preview.scss
 
 // 1024px And Below
-@media screen and (max-width: 1024px){
-
+@media screen and (max-width: 1024px) {
 }
 
-// 767px And Below
-@media screen and (max-width: 767px){
-
-
+// 768px And Below
+@media screen and (max-width: 768px) {
 }

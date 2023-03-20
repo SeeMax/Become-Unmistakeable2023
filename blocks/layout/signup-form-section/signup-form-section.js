@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
   /**
    * initializeBlock
    *
@@ -11,25 +11,27 @@
    * @param   object attributes The block attributes (only available when editing).
    * @return  void
    */
-  var initializeBlock = function( $block ) {
-      // $block.find('h2').css( "color", "blue" );
+  var initializeBlock = function ($block) {
+    // $block.find('h2').css( "color", "blue" );
   };
 
   // Initialize each block on page load (front end).
-  $(document).ready(function(){
-
+  $(document).ready(function () {
     // Make sure it's not the wp-backend
-    if (!$('body').hasClass("wp-admin")) {
+    if (!$("body").hasClass("wp-admin")) {
+      $(".signup-form-section").each(function () {
+        initializeBlock($(this));
 
-      $('.signup-form-section').each(function(){
-        initializeBlock( $(this) );
+        $(this).find(".wpcf7-submit").wrap('<div class="seemax-button"/>');
       });
     }
   });
 
   // Initialize dynamic block preview (editor).
-  if( window.acf ) {
-      window.acf.addAction( 'render_block_preview/type=signup-form-section', initializeBlock );
+  if (window.acf) {
+    window.acf.addAction(
+      "render_block_preview/type=signup-form-section",
+      initializeBlock
+    );
   }
-
 })(jQuery);

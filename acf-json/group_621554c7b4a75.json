@@ -6,6 +6,7 @@
             "key": "field_621557bd1f0e4",
             "label": "Grid Title",
             "name": "grid_title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_621555376fc08",
             "label": "Select Custom Posts to Show",
             "name": "posts_to_show",
+            "aria-label": "",
             "type": "relationship",
             "instructions": "Choose Which Posts to Show, up to 3.",
             "required": 0,
@@ -34,15 +36,18 @@
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "post_type": [
-                "custom_post_type"
+                "bios"
             ],
             "taxonomy": "",
-            "filters": "",
-            "elements": "",
-            "min": 1,
-            "max": 3,
-            "return_format": "object"
+            "filters": [
+                "search"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "elements": ""
         }
     ],
     "location": [
@@ -63,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1645565908
+    "modified": 1678907728
 }
