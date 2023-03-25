@@ -39,7 +39,7 @@ if( !empty($block['align']) ) {
       $btn_dest = get_sub_field('button_destination');
       $btn_text = get_sub_field('button_text');
     endwhile;endif;?>
-    <div class="half-half-left c-width-50">
+    <div class="half-half-left c-width-50 animatedSection">
       <?php if ($imageType == 'img'):?>
       <img src="<?php echo $image['url'];?>">
       <?php else:?>
@@ -72,7 +72,7 @@ if( !empty($block['align']) ) {
       $btn_dest = get_sub_field('button_destination');
       $btn_text = get_sub_field('button_text');
     endwhile;endif;?>
-    <div class="half-half-right c-width-50">
+    <div class="half-half-right c-width-50 animatedSection">
       <?php if ($imageType == 'img'):?>
       <img src="<?php echo $image['url'];?>">
       <?php else:?>

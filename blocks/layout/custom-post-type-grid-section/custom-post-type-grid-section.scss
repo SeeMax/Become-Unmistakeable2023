@@ -26,7 +26,7 @@ $darkBlue: #46c3f1;
   .grid-title {
     text-align: center;
     color: $darkYellow;
-    margin-bottom: 80px;
+    margin: 0 auto 80px auto;
   }
 }
 
@@ -60,6 +60,17 @@ $darkBlue: #46c3f1;
     height: 0;
     padding-bottom: 100%;
     margin-bottom: 40px;
+
+    .team-picture-mask {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      overflow: hidden;
+    }
 
     .background-image-section {
       width: 100%;
@@ -108,6 +119,7 @@ $darkBlue: #46c3f1;
     text-decoration: underline;
     text-decoration-color: white;
     transition: all 0.3s ease;
+    font-weight: 800;
 
     &:hover {
       text-decoration-color: $darkYellow;

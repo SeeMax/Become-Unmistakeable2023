@@ -31,6 +31,10 @@ section {
   width: 100%;
   height: auto;
   padding: 90px 0px;
+
+  svg {
+    overflow: visible;
+  }
 }
 
 .content {
@@ -95,7 +99,7 @@ h6 {
   font-family: "Nexa", sans-serif;
   font-weight: 800;
   margin: 0;
-  width: 100%;
+  // width: 100%;
 }
 
 h1 {
@@ -350,16 +354,53 @@ input {
   }
 }
 
+.animatedSingleLine,
+.animatedBodies {
+  position: relative;
+}
+
+.animatedLineCover {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: white;
+  z-index: 3;
+  // border-radius: 0 50px 50px 0;
+}
+
+.perspectiveBox {
+  perspective: 400px;
+}
+
 .white-background {
   background-color: white;
 }
+
+.offwhite-background {
+  background-color: $offWhite;
+
+  .animatedLineCover {
+    background-color: $offWhite;
+  }
+}
+
 .lightgray-background {
   background-color: $offOffWhite;
+
+  .animatedLineCover {
+    background-color: $offOffWhite;
+  }
 }
 
 .darkgray-background {
   background-color: $brandGray;
   color: white;
+
+  .animatedLineCover {
+    background-color: $brandGray;
+  }
 
   a {
     color: white;

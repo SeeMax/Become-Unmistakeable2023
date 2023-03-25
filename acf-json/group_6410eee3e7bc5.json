@@ -231,9 +231,9 @@
                 {
                     "key": "field_64187466301a1",
                     "label": "The Problem Solver",
-                    "name": "problem_solver",
+                    "name": "problem_solver_2",
                     "aria-label": "",
-                    "type": "radio",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -247,12 +247,12 @@
                         "umap": "uMap",
                         "ulead": "uLead"
                     },
-                    "default_value": "",
+                    "default_value": [],
                     "return_format": "value",
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "layout": "horizontal",
-                    "save_other_choice": 0
+                    "allow_custom": 0,
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "save_custom": 0
                 },
                 {
                     "key": "field_641874ca1dd05",
@@ -384,5 +384,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679325357
+    "modified": 1679694024
 }

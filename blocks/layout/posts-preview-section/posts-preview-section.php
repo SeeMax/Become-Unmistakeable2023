@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'posts-preview-section';
+$className = 'posts-preview-section animatedSection';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -39,7 +39,7 @@ if( !empty($block['align']) ) {
     </h2>
     <div class="single-posts-preview-area">
       <?php if($RecorCat == 'category'):?>
-        <?php $args = array(
+      <?php $args = array(
           'posts_per_page'      =>3,
           'post_type'           => 'post',
           'cat'                 => $cat_id,
@@ -48,41 +48,41 @@ if( !empty($block['align']) ) {
         ?>
       <?php else:?>
 
-        <?php if($allOrThree == 'all'):?>
-          <?php $args = array(
+      <?php if($allOrThree == 'all'):?>
+      <?php $args = array(
             'post_type'           => 'post',
             'ignore_sticky_posts' => true,
             );
           ?>
-        <?php else:?>
-          <?php $args = array(
+      <?php else:?>
+      <?php $args = array(
             'posts_per_page'      =>3,
             'post_type'           => 'post',
             'ignore_sticky_posts' => true,
             );
           ?>
-        <?php endif;?>
       <?php endif;?>
-    
+      <?php endif;?>
+
       <?php $wp_query = new WP_Query($args);?>
       <?php while ($wp_query->have_posts()) : $wp_query->the_post();?>
-        <?php $post_id = get_the_ID();?>
-          <?php get_template_part( 'partials/_single-post-preview' ); ?>
+      <?php $post_id = get_the_ID();?>
+      <?php get_template_part( 'partials/_single-post-preview' ); ?>
       <?php endwhile; ?>
       <?php wp_reset_query(); ?>
-      
+
       <?php if( have_rows('section_button') ): while( have_rows('section_button') ) : the_row();
         $btnText = get_sub_field('button_text');
         $btnDest = get_sub_field('button_destination');
       ?>
-        <?php if($btnText):?>
-          <div class="all-posts-button-area">
-            <div class="seemax-button">
-              <span><?php echo $btnText;?></span>
-              <a class="c-block-fill" href="<?php echo $btnDest;?>"></a>
-            </div>
-          </div>
-        <?php endif;?>
+      <?php if($btnText):?>
+      <div class="all-posts-button-area">
+        <div class="seemax-button">
+          <span><?php echo $btnText;?></span>
+          <a class="c-block-fill" href="<?php echo $btnDest;?>"></a>
+        </div>
+      </div>
+      <?php endif;?>
       <?php endwhile;endif;?>
     </div>
   </div>

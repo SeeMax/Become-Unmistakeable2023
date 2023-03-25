@@ -5,16 +5,21 @@ import {
   gsapRegisters,
   clickEvents,
   menuItemSetup,
+  scrollSetup,
+  scrollAnims,
   // navSearchSetup,
 } from "./index.js";
 
 window.addEventListener("load", function () {
   // Setup Basic Functionality
-  preLoader();
+
   externalLinks();
   gsapRegisters();
+  scrollSetup();
   clickEvents();
   menuItemSetup();
+  preLoader();
+  scrollAnims();
 
   if ($("body").hasClass("page-home")) {
   }

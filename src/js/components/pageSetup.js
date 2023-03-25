@@ -9,8 +9,9 @@ export let preLoader = () => {
       $("#preloader").remove();
     },
   });
-  tl.to("#preloader svg", { scale: 0 });
-  tl.to("#preloader", { opacity: 0 }, "+=0.05");
+  // tl.to("#preloader svg", { scale: 0 }, "rollIn");
+  tl.to("#preloader", { opacity: 0 }, "rollIn");
+  tl.to(".header", { top: 0, duration: 0.5, ease: "circ.out" }, "rollIn");
 };
 
 // Hide Each of the Mobile Nav Links - called in windowLoad.js
@@ -28,6 +29,8 @@ export let menuItemSetup = () => {
     <span class="menu-circle menu-circle-1"></span>
     <span class="menu-circle menu-circle-2"></span>
   `);
+
+  gsap.set(".header", { top: -112 });
 };
 
 // Always Open External Links in a new tab - called in windowLoad.js

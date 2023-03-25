@@ -15,4 +15,7 @@ export { gsapRegisters } from "./gsapRegisters.js";
 
 export { clickEvents } from "./clickEvents.js";
 
+export { scrollAnims } from "./scrollAnims.js";
+export { scrollSetup } from "./scrollSetup.js";
+
 // export { searchReveal } from "./searchReveal.js";

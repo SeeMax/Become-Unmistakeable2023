@@ -1,10 +1,12 @@
 <svg id="umap-portal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 418.35">
-  <circle id="circle-left" class="umap-portal-7" cx="172.48" cy="227.52" r="172.48"/>
-  <circle id="circle-bottom" class="umap-portal-1" cx="209.17" cy="245.87" r="172.48"/>
-  <circle id="circle-right" class="umap-portal-7" cx="227.52" cy="200" r="172.48"/>
-  <circle id="circle-top" class="umap-portal-1" cx="200" cy="172.48" r="172.48"/>
-  <circle id="circle-white-center" class="umap-portal-2" cx="200" cy="209.17" r="172.48"/>
-  <g id="umap-logo">
+  <g class="circleSpinner">
+    <circle id="circle-left" class="umap-portal-7" cx="172.48" cy="227.52" r="172.48"/>
+    <circle id="circle-bottom" class="umap-portal-1" cx="209.17" cy="245.87" r="172.48"/>
+    <circle id="circle-right" class="umap-portal-7" cx="227.52" cy="200" r="172.48"/>
+    <circle id="circle-top" class="umap-portal-1" cx="200" cy="172.48" r="172.48"/>
+    <circle id="circle-center" class="umap-portal-2" cx="200" cy="209.17" r="172.48"/>
+  </g>
+  <g id="umap-logo" class="iconSpinner">
     <g id="Brain">
     <path class="umap-portal-7" d="m150.15,196.56c.15.83.23,1.69.23,2.56,0,.95-.1,1.88-.28,2.78,1.96-1.47,4.39-2.34,7.03-2.34,2.5,0,4.82.78,6.72,2.12.74-1.72,1.14-3.61,1.14-5.6,0-7.25-5.42-13.24-12.42-14.15.67,1.65,1.04,3.45,1.04,5.35,0,3.55-1.31,6.8-3.47,9.29Z"/>
     <path class="umap-portal-6" d="m128.66,187.37c2.21-1.45,4.85-2.29,7.69-2.29,1.57,0,3.08.26,4.48.73,4.77,1.61,8.39,5.71,9.32,10.75,2.16-2.49,3.47-5.73,3.47-9.29,0-1.89-.37-3.7-1.04-5.35-2.11-5.18-7.19-8.83-13.13-8.83-4.02,0-7.64,1.67-10.22,4.36l-.95,7.62.39,2.29Z"/>

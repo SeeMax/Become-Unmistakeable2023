@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'full-width-section';
+$className = 'full-width-section animatedSection';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }

@@ -21,7 +21,8 @@
         endwhile;
       endif;
 
-      $solver = get_sub_field( 'problem_solver');
+      
+$solver = get_sub_field( 'problem_solver_2');
 
       if( have_rows('the_results') ):
         while( have_rows('the_results') ): the_row(); 
@@ -38,7 +39,7 @@
                   
     endwhile;
   endif; ?>
-  <section class="single-co-hero">
+  <section class="single-co-hero animatedSection">
     <div class="content">
 
       <h5>Case Study</h5>
@@ -46,7 +47,7 @@
       <h6><?php echo $bodyText;?></h6>
     </div>
   </section>
-  <section class="single-co-prob-opp">
+  <section class="single-co-prob-opp darkgray-background animatedSection">
     <div class="content">
       <div class="prob-opp-text-half c-width-50">
         <div class="prob-opp-group">
@@ -62,57 +63,77 @@
           <h6><?php echo $opp;?></h6>
         </div>
       </div>
-      <div class="prob-opp-image-half c-width-50">
+      <div class="prob-opp-image-half  c-width-50">
         <svg id="client-logo-portal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 513.34">
-
-          <ellipse id="circle-bottom" class="logo-portal-2" cx="263.46" cy="297.73" rx="216.54" ry="215.61" />
-          <ellipse id="circle-top" cx="240" cy="215.61" rx="216.54" ry="215.61" />
-          <ellipse id="circle-white-center" class="logo-portal-1" cx="216.54" cy="273.39" rx="216.54" ry="215.61" />
-          <image width="250" x="95" height="200" y="176.5" xlink:href="<?php echo $logo['url'];?>" />
+          <g class="circleSpinner">
+            <ellipse id="circle-bottom" class="logo-portal-2" cx="263.46" cy="297.73" rx="216.54" ry="215.61" />
+            <ellipse id="circle-top" cx="240" cy="215.61" rx="216.54" ry="215.61" />
+            <ellipse id="circle-center" class="logo-portal-1" cx="216.54" cy="273.39" rx="216.54" ry="215.61" />
+          </g>
+          <g class="iconSpinner">
+            <image width="250" x="95" height="200" y="176.5" xlink:href="<?php echo $logo['url'];?>" />
+          </g>
         </svg>
 
       </div>
     </div>
   </section>
-  <section class="single-co-solver">
+  <section class="single-co-solver animatedSection">
     <div class="content">
       <h5>The Problem Solver</h5>
-      <?php if ($solver == 'umap'):?>
-      <img src="<?php echo get_template_directory_uri(); ?>/dist/images/umap-logo.svg" alt="uMapLogo">
-      <?php else:?>
-      <img src="<?php echo get_template_directory_uri(); ?>/dist/images/ulead-logo.svg" alt="uLeadLogo">
-      <?php endif;?>
+      <div class="solver-images-box">
+        <?php if( $solver ): ?>
+        <?php foreach( $solver as $solve ): ?>
+        <?php if ($solve == 'umap'):?>
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/images/umap-logo.svg" alt="uMapLogo">
+        <?php endif;?>
+        <?php if ($solve == 'ulead'):?>
+        <img class="ulead-img" src="<?php echo get_template_directory_uri(); ?>/dist/images/ulead-logo.svg"
+          alt="uLeadLogo">
+        <?php endif;?>
+        <?php endforeach; ?>
+        <?php endif;?>
+      </div>
+
     </div>
   </section>
 
-  <section class="single-co-results">
-    <?php if( have_rows('case_study_content') ): while( have_rows('case_study_content') ): the_row();?>
+
+  <?php if( have_rows('case_study_content') ): while( have_rows('case_study_content') ): the_row();?>
+  <?php if( have_rows('the_results') ):?>
+  <section class="single-co-results darkgray-background animatedSection">
     <div class="content">
       <h5>The Results</h5>
       <div class="results-area">
-        <?php if( have_rows('the_results') ):while( have_rows('the_results') ): the_row();?>
+        <?php while( have_rows('the_results') ): the_row();?>
         <?php $result = get_sub_field( 'single_result' );?>
         <div class="single-result c-width-33-3">
           <h4><?php echo $result;?></h4>
+          <div class="animatedLineCover"></div>
         </div>
-        <?php endwhile;endif;?>
+        <?php endwhile;?>
       </div>
     </div>
   </section>
-  <section class="single-co-feedback">
+  <?php endif;?>
+  <?php if( have_rows('the_feedback') ):?>
+  <section class="single-co-feedback offwhite-background animatedSection">
     <div class="content">
       <h5>The Feedback</h5>
       <div class="feedback-area">
-        <?php if( have_rows('the_feedback') ):while( have_rows('the_feedback') ): the_row();?>
+        <?php while( have_rows('the_feedback') ): the_row();?>
+
         <?php $feedback = get_sub_field( 'single_result' );?>
         <div class="single-feedback c-width-33-3">
-          <span><?php echo $feedback;?></span>
+          <p><?php echo $feedback;?></p>
         </div>
-        <?php endwhile;endif;?>
+        <?php endwhile;?>
       </div>
     </div>
-    <?php endwhile;endif;?>
   </section>
+  <?php endif;?>
+  <?php endwhile;endif;?>
+
 
   <?php endwhile; ?>
 </main>

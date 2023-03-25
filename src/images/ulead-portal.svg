@@ -1,10 +1,12 @@
 <svg id="ulead-portal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 418.35">
-  <circle id="circle-right" class="ulead-portal-9" cx="227.52" cy="227.52" r="172.48"/>
-  <circle id="circle-bottom" class="ulead-portal-4" cx="190.83" cy="245.87" r="172.48"/>
-  <circle id="circle-left" class="ulead-portal-9" cx="172.48" cy="200" r="172.48"/>
-  <circle id="circle-top" class="ulead-portal-4" cx="200" cy="172.48" r="172.48"/>
-  <circle id="circle-white-center" class="ulead-portal-1" cx="200" cy="209.17" r="172.48"/>
-  <g id="uLead_Logo">
+  <g class="circleSpinner">
+    <circle id="circle-right" class="ulead-portal-9" cx="227.52" cy="227.52" r="172.48"/>
+    <circle id="circle-bottom" class="ulead-portal-4" cx="190.83" cy="245.87" r="172.48"/>
+    <circle id="circle-left" class="ulead-portal-9" cx="172.48" cy="200" r="172.48"/>
+    <circle id="circle-top" class="ulead-portal-4" cx="200" cy="172.48" r="172.48"/>
+    <circle id="circle-center" class="ulead-portal-1" cx="200" cy="209.17" r="172.48"/>
+  </g>
+  <g id="uLead_Logo" class="iconSpinner">
     <path class="ulead-portal-5" d="m160.96,198.61c3.22,0,5.83-2.6,5.83-5.8s-2.61-5.8-5.83-5.8-5.83,2.6-5.83,5.8,2.61,5.8,5.83,5.8Z"/>
     <path class="ulead-portal-2" d="m176.63,198.61c3.22,0,5.83-2.6,5.83-5.8s-2.61-5.8-5.83-5.8-5.83,2.6-5.83,5.8,2.61,5.8,5.83,5.8Z"/>
     <path class="ulead-portal-6" d="m192.3,198.61c3.22,0,5.83-2.6,5.83-5.8s-2.61-5.8-5.83-5.8-5.83,2.6-5.83,5.8,2.61,5.8,5.83,5.8Z"/>

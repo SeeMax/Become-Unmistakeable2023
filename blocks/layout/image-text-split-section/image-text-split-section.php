@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'image-text-section';
+$className = 'image-text-section animatedSection';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }

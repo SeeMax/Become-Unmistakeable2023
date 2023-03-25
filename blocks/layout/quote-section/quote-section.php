@@ -12,7 +12,7 @@
   $id = 'quote-section-' . $block['id'];
   if( !empty($block['anchor']) ) {$id = $block['anchor'];}
   // Create class attribute allowing for custom "className" and "align" values.
-  $className = 'quote-section quoteSection';
+  $className = 'quote-section quoteSection animatedSection offwhite-background';
   if( !empty($block['className']) ) {$className .= ' ' . $block['className'];}
   if( !empty($block['align']) ) {$className .= ' align' . $block['align'];}
 ?>

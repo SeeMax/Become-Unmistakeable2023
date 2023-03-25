@@ -24,6 +24,7 @@ $darkBlue: #46c3f1;
   text-align: center;
 
   .content {
+    flex-direction: column;
     justify-content: center;
     align-content: center;
   }

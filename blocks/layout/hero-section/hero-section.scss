@@ -22,6 +22,9 @@ $darkBlue: #46c3f1;
     align-items: center;
   }
   .hero-image-half {
+    svg {
+      overflow: visible;
+    }
   }
 
   .hero-text-half {

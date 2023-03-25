@@ -6,7 +6,9 @@
 	.st0{fill:#223643;}
 	.st1{fill:#FFFFFF;}
 </style>
-<ellipse id="circle-bottom" class="st0" cx="263.5" cy="297.7" rx="216.5" ry="215.6"/>
-<ellipse id="circle-top" cx="240" cy="215.6" rx="216.5" ry="215.6"/>
-<ellipse id="circle-white-center" class="st1" cx="216.5" cy="273.4" rx="216.5" ry="215.6"/>
+  <g class="circleSpinner">
+		<ellipse id="circle-bottom" class="st0" cx="263.5" cy="297.7" rx="216.5" ry="215.6"/>
+		<ellipse id="circle-top" cx="240" cy="215.6" rx="216.5" ry="215.6"/>
+		<ellipse id="circle-center" class="st1" cx="216.5" cy="273.4" rx="216.5" ry="215.6"/>
+	</g>
 </svg>

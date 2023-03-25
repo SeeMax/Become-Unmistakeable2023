@@ -10,7 +10,7 @@
   $id = 'hero-section-' . $block['id'];
   if( !empty($block['anchor']) ) {$id = $block['anchor'];}
   // Create class attribute allowing for custom "className" and "align" values.
-  $className = 'hero-section heroSection';
+  $className = 'hero-section heroSection animatedSection';
   if( !empty($block['className']) ) {$className .= ' ' . $block['className'];}
   if( !empty($block['align']) ) {$className .= ' align' . $block['align'];}
 ?>
@@ -34,7 +34,7 @@
   <div class=" content">
     <div class="hero-image-half c-width-40">
       <?php if ($imageType == 'img'):?>
-      <img src="(<?php echo $image['url'];?>)">
+      <img src="<?php echo $image['url'];?>">
       <?php else:?>
       <?php echo $svgCode;?>
       <?php endif;?>

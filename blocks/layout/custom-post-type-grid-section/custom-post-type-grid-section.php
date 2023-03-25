@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'custom-post-type-grid-section';
+$className = 'custom-post-type-grid-section animatedSection';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -69,10 +69,12 @@ if( !empty($block['align']) ) {
       <div class="single-custom-post-type-grid-item singleCPTGridItem" data-cpt-popup=<?php echo $featured_post->ID;?>>
         <div class="team-image-mask">
           <div class="image-background-circle"></div>
-          <div class="image-background-circle image-background-circle-2"></div>
-          <div class="background-image-section" style="background-image:url(  
-            <?php echo $image['url'];?>
-          );"></div>
+          <div class="image-background-circle image-background-circle-2 aboutSpinner"></div>
+          <div class="team-picture-mask">
+            <div class="background-image-section slidingImage" style="background-image:url(  
+              <?php echo $image['url'];?>
+            );"></div>
+          </div>
         </div>
         <h5><?php echo $headline;?></h5>
         <h6><?php echo $title;?></h6>
