@@ -1,0 +1,50 @@
+$black: #231f20;
+$white: #ffffff;
+$offWhite: #f2f3f4;
+$brandGray: #4a5155;
+$lightPurple: #cbf600;
+
+.regular-text-section {
+  // padding: 120px 0 140px 0;
+  .content {
+    // justify-content: center;
+  }
+
+  .regular-text-inner {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // text-align: center;
+    // padding: 20px 45px;
+
+    h1 {
+      // max-width: 850px;
+      // margin-bottom: 20px;
+    }
+    h6 {
+      max-width: 576px;
+    }
+    .seemax-button {
+      margin-top: 30px;
+    }
+  }
+}
+
+.regular-text-section.left-text-alignment {
+  .regular-text-inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px) {
+  .regular-text-section {
+  }
+}
+
+// 768px And Below
+@media screen and (max-width: 768px) {
+  .regular-text-section {
+  }
+}

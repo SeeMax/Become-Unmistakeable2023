@@ -744,6 +744,21 @@ function register_acf_block_types() {
   ));
 
   acf_register_block_type(array(
+    'name'              => 'regular-text-section',
+    'title'             => __('Regular Text Section'),
+    'description'       => __('Add A Regular Text Section'),
+    'category'          => 'layout',
+    'icon'              => 'align-wide',
+    'keywords'          => array( 'highlight'),
+    'mode'               => 'auto',
+    'align'             => 'full',
+    'supports'          => array( 'align' =>false ),
+    'render_template'   => get_template_directory() . '/blocks/layout/regular-text-section/regular-text-section.php',
+    'enqueue_style'     => get_template_directory_uri() . '/blocks/layout/regular-text-section/regular-text-section.css',
+    'enqueue_script'    => get_template_directory_uri() . '/blocks/dist/js/regular-text-section.js'
+  ));
+
+  acf_register_block_type(array(
     'name'              => 'quote-section',
     'title'             => __('Company Carousel Section'),
     'description'       => __('Add A Carousel of Companies'),
@@ -773,6 +788,7 @@ function seemax_gutenberg_css(){
       '/blocks/layout/custom-post-type-grid-section/custom-post-type-grid-section.css',
       '/blocks/layout/signup-form-section/signup-form-section.css',
       '/blocks/layout/full-width-section/full-width-section.css',
+      '/blocks/layout/regular-text-section/regular-text-section.css',
       '/blocks/layout/quote-section/quote-section.css',
       '/blocks/layout/image-text-split-section/image-text-split-section.css'
     )
@@ -821,7 +837,8 @@ function seemax_allowed_block_types( $allowed_blocks, $post ) {
       'acf/full-width-section',
       'acf/quote-section',
       'acf/image-text-split-section',
-      'acf/half-half-section'
+      'acf/half-half-section',
+      'acf/regular-text-section'
       // 'core/paragraph',
       // 'core/image',
       // 'core/heading',
