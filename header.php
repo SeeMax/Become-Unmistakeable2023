@@ -23,18 +23,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="google-site-verification" content="KheFQke9jRju8p6qnTfsIWo3gV0BuoG4-WDHEl3I1uQ" />
   <?php wp_head(); ?>
 </head>
 <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118830637-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-118830637-1');
+</script>
 
 <body <?php body_class(); ?>>
   <div class="wrapper">

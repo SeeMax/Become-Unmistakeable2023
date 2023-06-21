@@ -491,6 +491,7 @@ function seemax_blocks_create_post_type() {
       'menu_icon' => 'dashicons-buddicons-buddypress-logo',
       'has_archive' => true,
       'show_in_rest'=> true,
+      'publicly_queryable'  => false,
       //  
       // 'supports' => array('title','editor'),
     )
@@ -509,6 +510,7 @@ function seemax_blocks_create_post_type() {
       'menu_icon' => 'dashicons-businessman',
       'has_archive' => true,
       'show_in_rest'=> true,
+      'publicly_queryable'  => false,
       //  
       // 'supports' => array('title','editor'),
     )
