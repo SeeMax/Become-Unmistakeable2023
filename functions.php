@@ -510,7 +510,7 @@ function seemax_blocks_create_post_type() {
       'menu_icon' => 'dashicons-businessman',
       'has_archive' => true,
       'show_in_rest'=> true,
-      'publicly_queryable'  => false,
+      'publicly_queryable'  => true,
       //  
       // 'supports' => array('title','editor'),
     )
@@ -702,8 +702,8 @@ function register_acf_block_types() {
 
   acf_register_block_type(array(
     'name'              => 'custom-post-type-grid-section',
-    'title'             => __('Custom Post Type Grid Section'),
-    'description'       => __('Add A Grid of Custom Post Types'),
+    'title'             => __('Bios Grid Section'),
+    'description'       => __('Add A Grid of Bios'),
     'category'          => 'layout',
     'icon'              => 'groups',
     'keywords'          => array('grid'),

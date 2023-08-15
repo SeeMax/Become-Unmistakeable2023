@@ -3,6 +3,27 @@
     "title": "Three Column Section",
     "fields": [
         {
+            "key": "field_64db9a3ee7adb",
+            "label": "Section Heading",
+            "name": "section_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64122eb17e025",
             "label": "Background Color",
             "name": "background_color",
@@ -12,7 +33,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -39,7 +60,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -725,5 +746,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678981553
+    "modified": 1692113523
 }

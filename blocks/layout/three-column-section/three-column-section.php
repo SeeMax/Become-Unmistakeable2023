@@ -27,9 +27,13 @@ if( !empty($block['align']) ) {
 
 <?php $backColor = get_field("background_color");?>
 <?php $highlightColor = get_field("highlight_color");?>
+<?php $sectionHeading = get_field("section_heading");?>
 <section id="<?php echo esc_attr($id); ?>"
   class="<?php echo esc_attr($className); ?> <?php echo $backColor;?>-background <?php echo $highlightColor;?>-text-section">
   <div class="content">
+    <?php if($sectionHeading):?>
+    <h2><?php echo $sectionHeading;?></h2>
+    <?php endif;?>
     <?php if( have_rows('left_half') ): while( have_rows('left_half') ) : the_row();
     $imageType = get_sub_field('image_type');
     $image = get_sub_field('image');
