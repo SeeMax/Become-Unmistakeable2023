@@ -26,13 +26,15 @@
       if( $featured_posts ):?>
 
     <?php foreach( $featured_posts as $featured_post ): 
-      $permalink = get_permalink( $featured_post->ID );
+      // $permalink = get_permalink( $featured_post->ID );
+      
       $title = get_the_title( $featured_post->ID );
       $logo = get_field( 'logo', $featured_post->ID );?>
     <?php if( have_rows('carousel_quote', $featured_post->ID) ):
         while( have_rows('carousel_quote', $featured_post->ID) ): the_row(); 
           $preview = get_sub_field( 'quote_text', $featured_post->ID );
           $person = get_sub_field( 'person_quoted', $featured_post->ID );
+          $permalink = get_sub_field( 'page_link', $featured_post->ID );
         endwhile;
       endif; ?>
     <div class="single-quote-section-slide background-image-section">
