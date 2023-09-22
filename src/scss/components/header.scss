@@ -54,6 +54,7 @@
     background: white;
     border-right: 3px solid white;
     overflow: hidden;
+    transition: color 0.3s ease-in;
 
     .menu-item-text {
       position: relative;
@@ -126,6 +127,49 @@
       background: $darkPurple;
     }
   }
+
+  a.openSubMenu {
+    // background: $lightPurple;
+    color: white;
+
+    .menu-circle-1 {
+      right: 0;
+    }
+
+    .menu-circle-2 {
+      left: 0;
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: calc(100% - 33px);
+    margin: 0;
+    width: auto;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    left: auto;
+    // height: 0px;
+    overflow: hidden;
+    border-radius: 0;
+
+    .menu-item {
+      width: 100%;
+      background-color: $lightPurple;
+      border-radius: 0;
+      color: white;
+      border: none;
+
+      &:hover {
+        background-color: $darkPurple;
+      }
+    }
+    .menu-circle {
+      display: none;
+    }
+  }
 }
 
 .main-nav-inner {
@@ -153,15 +197,16 @@
     width: 100%;
     border-radius: 0;
     z-index: 100;
+    overflow: scroll;
 
     .menu-item {
       width: auto;
-      margin: 0 0 20px 0;
+      margin: 0 0 5px 0;
       transition: none;
       font-size: 1.1em;
       padding: 18px 50px 18px 60px;
       border-right: 0px solid white;
-      background: $offWhite;
+      background: $lightPurple;
       color: $textGray;
       border-radius: 50px;
       border-top-left-radius: 0px;
@@ -197,6 +242,40 @@
         color: $textGray;
       }
     }
+
+    .sub-menu {
+      position: relative;
+      top: 0;
+      margin: 0;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      left: auto;
+      margin-bottom: 0px;
+      padding: 0px;
+      // height: 0px;
+      // overflow: hidden;
+      // border-radius: 0;
+
+      .menu-item {
+        width: 100%;
+        background-color: white;
+        border-radius: 0;
+        color: black;
+        border: none;
+        margin: 0;
+        font-size: 0.9em;
+
+        &:hover {
+          background-color: white;
+        }
+      }
+      .menu-circle {
+        display: none;
+      }
+    }
   }
 
   .main-nav-inner {
@@ -205,10 +284,10 @@
     align-items: flex-start;
     align-content: flex-start;
     width: 100%;
-    height: 100%;
+    height: auto;
     // Mirror .content class from global.scss
     max-width: 1400px;
-    padding: 110px 50px 10vh 0px;
+    padding: 110px 50px 3vh 0px;
   }
 
   .header-logo {
@@ -257,18 +336,19 @@
 
   .main-nav {
     .menu-item {
-      padding: 18px 50px 18px 40px;
+      font-size: 0.95em;
+      padding: 14px 50px 14px 40px;
 
       &:nth-of-type(1) {
-        padding: 18px 50px 18px 40px;
+        padding: 14px 50px 14px 40px;
       }
 
       &:nth-last-of-type(2) {
-        padding: 18px 50px 18px 40px;
+        padding: 14px 50px 14px 40px;
       }
 
       &:nth-last-of-type(1) {
-        padding: 18px 50px 18px 40px;
+        padding: 14px 50px 14px 40px;
       }
     }
   }

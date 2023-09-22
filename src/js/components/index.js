@@ -18,4 +18,6 @@ export { clickEvents } from "./clickEvents.js";
 export { scrollAnims } from "./scrollAnims.js";
 export { scrollSetup } from "./scrollSetup.js";
 
+export { subMenu } from "./subMenu.js";
+
 // export { searchReveal } from "./searchReveal.js";

@@ -7,6 +7,7 @@ import {
   menuItemSetup,
   scrollSetup,
   scrollAnims,
+  subMenu,
   // navSearchSetup,
 } from "./index.js";
 
@@ -27,6 +28,7 @@ window.addEventListener("load", function () {
   if ($(window).width() <= 1024) {
     mobileNavSetup();
   } else {
+    subMenu();
   }
 });
 
