@@ -5,7 +5,7 @@ export let subMenu = () => {
   // Loop through each element with the class "menu-item-has-children"
   menuItemsWithChildren.forEach(function (menuItem) {
     // Get the x position of the current element
-    var xPosition = menuItem.getBoundingClientRect().left;
+    var xPosition = menuItem.offsetLeft;
     // Find the next sibling element with class "sub-menu"
     var subMenu = menuItem.nextElementSibling;
     // Check if the next sibling is a "sub-menu" element
